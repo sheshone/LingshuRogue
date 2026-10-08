@@ -1,0 +1,66 @@
+﻿id,名称,神识占用,品质,流派标签,灵气消耗,施展条件,卡面描述,效果摘要,原始效果字段
+honing_breath,磨锋吐纳,1,普通,金、attack、mechanism,金=2,,以金气试锋，造成少量伤害并积累1层锋锐。锋锐可被断脉闪消耗。,"1. 伤害 金 6 →敌方
+2. 获得状态 sharpness 1 →自身","1. type=damage；attribute=金；value=6；target=敌方
+2. type=add_status；status=sharpness；value=1；target=自身"
+meridian_severing_flash,断脉闪,2,稀有,金、attack、finisher,金=3,,消耗全部锋锐发动斩击；目标生命过半时追加一次收割伤害。,"1. 伤害 金 9 →敌方 [scaling=source=status；status=sharpness；target=自身；per_point=4]
+2. 伤害 金 6 →敌方 [condition=hp_ratio_lte=target=敌方；value=0.5]
+3. 消耗状态 sharpness →自身 [all=是]","1. type=damage；attribute=金；value=9；target=敌方；scaling=source=status；status=sharpness；target=自身；per_point=4
+2. type=damage；attribute=金；value=6；target=敌方；condition=hp_ratio_lte=target=敌方；value=0.5
+3. type=consume_status；status=sharpness；all=是；target=自身"
+sprouting_guard,萌芽护身,1,普通,木、defense、mechanism,木=2,,获得护盾并积累1层生机，使青木构筑在防守时也能成长。,"1. 护盾 5 →自身
+2. 获得状态 vitality 1 →自身","1. type=shield；value=5；target=自身
+2. type=add_status；status=vitality；value=1；target=自身"
+life_bloom,生生化元,2,稀有,木、heal、finisher,木=3,,消耗全部生机恢复生命并获得护盾，生机越多收益越高。,"1. 治疗 4 →自身 [scaling=source=status；status=vitality；target=自身；per_point=2]
+2. 护盾 4 →自身 [scaling=source=status；status=vitality；target=自身；per_point=2]
+3. 消耗状态 vitality →自身 [all=是]","1. type=heal；value=4；target=自身；scaling=source=status；status=vitality；target=自身；per_point=2
+2. type=shield；value=4；target=自身；scaling=source=status；status=vitality；target=自身；per_point=2
+3. type=consume_status；status=vitality；all=是；target=自身"
+ember_guard,余烬护身,1,普通,火、defense、mechanism,火=2,,以余火护体并留下1层火种，让防御回合也为爆发铺垫。,"1. 护盾 5 →自身
+2. 获得状态 flame_seed 1 →自身","1. type=shield；value=5；target=自身
+2. type=add_status；status=flame_seed；value=1；target=自身"
+wildfire_wave,流火燎原,2,稀有,火、attack、area、mechanism,火=3,,火浪席卷所有敌人并留下火种，兼顾群攻与下一轮爆发。,"1. 伤害 火 8 →全体敌方
+2. 获得状态 flame_seed 1 →自身","1. type=damage；attribute=火；value=8；target=全体敌方
+2. type=add_status；status=flame_seed；value=1；target=自身"
+rock_reversal,撼山反震,2,稀有,土、attack、finisher,土=2,,将当前护盾转为反震伤害并消耗全部护盾，形成厚土的爆发窗口。,"1. 伤害 土 3 →敌方 [scaling=source=shield；target=自身；per_point=1]
+2. consume_shield →自身 [all=是]","1. type=damage；attribute=土；value=3；target=敌方；scaling=source=shield；target=自身；per_point=1
+2. type=consume_shield；all=是；target=自身"
+mountain_guard,镇岳式,1,普通,土、defense、shield、mechanism,土=3,,建立厚重防线并积累地势，是守御与山崩术的共同组件。,"1. 护盾 11 →自身
+2. 获得状态 terrain 1 →自身","1. type=shield；value=11；target=自身
+2. type=add_status；status=terrain；value=1；target=自身"
+water_cycle,周天水引,1,普通,水、attack、flow、mechanism,水=3,,水气沿经脉回转：造成伤害，返还水灵气并积累回流。,"1. 伤害 水 7 →敌方
+2. 增加丹田灵气 1 →自身 [qi=水]
+3. 获得状态 flow 1 →自身","1. type=damage；attribute=水；value=7；target=敌方
+2. type=add_sea_qi；qi=水；value=1；target=自身
+3. type=add_status；status=flow；value=1；target=自身"
+five_phase_exchange,五气归流,1,普通,水、resource、defense,any_qi=3,,消耗任意灵气并凝成水灵气，同时获得护盾，修正不利的丹田随机结果。,"1. 增加丹田灵气 1 →自身 [qi=水]
+2. 护盾 4 →自身","1. type=add_sea_qi；qi=水；value=1；target=自身
+2. type=shield；value=4；target=自身"
+golden_arc,流金剑弧,1,普通,金、attack、area,金=3,,金气化弧横扫群敌，是稳定的炼气期群攻手段。,1. 伤害 金 8 →全体敌方,1. type=damage；attribute=金；value=8；target=全体敌方
+metallic_guard,金光护体,1,普通,金、defense、shield,金=2,,以金气凝成护体辉光，立即获得护盾。,1. 护盾 7 →自身,1. type=shield；value=7；target=自身
+verdant_recovery,青木回春术,1,普通,木、heal,木=2,,引木气滋养经脉，在战斗中恢复少量生命。,1. 治疗 6 →自身,1. type=heal；value=6；target=自身
+wooden_aegis,藤甲术,1,普通,木、defense、shield,木=2,,催生灵藤缠绕周身，形成一层柔韧防护。,1. 护盾 7 →自身,1. type=shield；value=7；target=自身
+five_element_guard,五行护体诀,1,普通,universal、defense、shield,any_qi=2,,以任意灵气稳固周身气机，获得基础护盾。,1. 护盾 6 →自身,1. type=shield；value=6；target=自身
+qi_strike,灵气冲击,1,basic,basic、attack,all_sea_qi=是；minimum=1,,耗尽当前丹田灵气发动一次微弱冲击；每消耗3点灵气，伤害提高1点。,1. 伤害 2 →敌方 [scaling=source=spent_qi_total；points_per_bonus=3；per_point=1],1. type=damage；value=2；target=敌方；scaling=source=spent_qi_total；points_per_bonus=3；per_point=1
+metal_edge_art,金刃术,1,普通,金、attack,金=2,,凝聚金灵气化作锋刃攻击目标。,1. 伤害 金 11 →敌方,1. type=damage；attribute=金；value=11；target=敌方
+wood_thorn_art,青藤刺,1,普通,木、attack,木=2,,催动木灵气生出锐藤刺向目标。,1. 伤害 木 10 →敌方,1. type=damage；attribute=木；value=10；target=敌方
+fireball,火弹术,1,普通,火、attack,火=2,,凝聚一团火灵气射向目标。,1. 伤害 火 12 →敌方,1. type=damage；attribute=火；value=12；target=敌方
+kindling_art,引火诀,1,普通,火、attack、mechanism,火=2,,以火灵气灼伤目标，同时留下可供爆发的火种。,"1. 伤害 火 6 →敌方
+2. 获得状态 flame_seed 1 →自身","1. type=damage；attribute=火；value=6；target=敌方
+2. type=add_status；status=flame_seed；value=1；target=自身"
+flame_burst,炎爆术,2,稀有,火、attack、finisher,火=3,,引爆积蓄的火种；即使没有火种，也能造成基础火焰伤害。,"1. 伤害 火 12 →敌方 [scaling=source=status；status=flame_seed；target=自身；per_point=5]
+2. 消耗状态 flame_seed →自身 [all=是]","1. type=damage；attribute=火；value=12；target=敌方；scaling=source=status；status=flame_seed；target=自身；per_point=5
+2. type=consume_status；status=flame_seed；all=是；target=自身"
+body_protection,岩甲术,1,普通,土、defense、shield,土=2,,引土灵气凝成岩甲护住周身，同时借岩势撞击目标。,"1. 护盾 7 →自身
+2. 伤害 土 6 →敌方","1. type=shield；value=7；target=自身
+2. type=damage；attribute=土；value=6；target=敌方"
+terrain_art,地势诀,1,普通,土、defense、shield、mechanism,土=2,,借地势护体，并积蓄可供山崩术调用的地势。,"1. 护盾 6 →自身
+2. 获得状态 terrain 1 →自身","1. type=shield；value=6；target=自身
+2. type=add_status；status=terrain；value=1；target=自身"
+mountain_collapse,山崩术,2,稀有,土、attack、finisher,土=3,,引动积蓄的地势轰击目标；没有地势时仍可造成基础伤害。,"1. 伤害 土 10 →敌方 [scaling=source=status；status=terrain；target=自身；per_point=4]
+2. 消耗状态 terrain →自身 [all=是]","1. type=damage；attribute=土；value=10；target=敌方；scaling=source=status；status=terrain；target=自身；per_point=4
+2. type=consume_status；status=terrain；all=是；target=自身"
+water_arrow,水箭术,1,普通,水、attack,水=2,,将水灵气凝成箭矢，稳定冲击目标。,1. 伤害 水 10 →敌方,1. type=damage；attribute=水；value=10；target=敌方
+returning_flow,回流诀,1,普通,水、attack、mechanism、flow,水=3,,以两份水灵气推动回流，攻击后返还一份水灵气。,"1. 伤害 水 8 →敌方
+2. 增加丹田灵气 1 →自身 [qi=水]","1. type=damage；attribute=水；value=8；target=敌方
+2. type=add_sea_qi；qi=水；value=1；target=自身"
+tidal_art,潮汐术,2,稀有,水、attack、finisher、area,水=3,,引动潮汐，冲击所有敌人。,1. 伤害 水 12 →全体敌方,1. type=damage；attribute=水；value=12；target=全体敌方

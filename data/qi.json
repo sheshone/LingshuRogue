@@ -1,0 +1,44 @@
+{
+  "qi_types": [
+    {
+      "id": "metal",
+      "name": "金灵气",
+      "category": "five_element",
+      "storable": true,
+      "color": "#d9d2b6",
+      "description": "五行基础灵气之一，肃锐凝练。"
+    },
+    {
+      "id": "wood",
+      "name": "木灵气",
+      "category": "five_element",
+      "storable": true,
+      "color": "#68b56b",
+      "description": "五行基础灵气之一，生发绵延。"
+    },
+    {
+      "id": "fire",
+      "name": "火灵气",
+      "category": "five_element",
+      "storable": true,
+      "color": "#ef6c4d",
+      "description": "五行基础灵气之一，炽烈升腾。"
+    },
+    {
+      "id": "water",
+      "name": "水灵气",
+      "category": "five_element",
+      "storable": true,
+      "color": "#4d9def",
+      "description": "五行基础灵气之一，润下流转。"
+    },
+    {
+      "id": "earth",
+      "name": "土灵气",
+      "category": "five_element",
+      "storable": true,
+      "color": "#b58a55",
+      "description": "五行基础灵气之一，厚重承载。"
+    }
+  ]
+}

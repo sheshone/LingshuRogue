@@ -1,0 +1,6 @@
+﻿id,名称,描述,五行倾向,初始神通ID,替换神通ID,效果摘要,原始效果字段
+metal_method,锐金诀,以金行灵气淬炼锋芒，追求凝练迅捷的攻势。,金=1.2,metal_edge_art,qi_strike,1. 规则修正 10 →spell_tag:metal [effect=damage_up],1. type=modifier；target=spell_tag:metal；effect=damage_up；value=10
+wood_method,青木诀,以木行灵气温养生机，讲究生发与绵延。,木=1.2,wood_thorn_art,qi_strike,1. 规则修正 10 →spell_tag:wood [effect=damage_up],1. type=modifier；target=spell_tag:wood；effect=damage_up；value=10
+water_method,清水诀,以水行灵气循环不息，重视灵气调度与绵长攻势。,水=1.2,water_arrow,qi_strike,1. 规则修正 25 →battle_rule:sea_retention [effect=retention_up],1. type=modifier；target=battle_rule:sea_retention；effect=retention_up；value=25
+flame_method,赤炎诀,以火行灵气为根基，追求炽烈直接的攻势。,火=1.2,fireball,qi_strike,1. 规则修正 10 →spell_tag:fire [effect=damage_up],1. type=modifier；target=spell_tag:fire；effect=damage_up；value=10
+earth_method,厚土诀,引土行灵气稳固周身，以守御等待反击。,土=1.2,body_protection,qi_strike,1. 规则修正 10 →effect:shield [effect=shield_up],1. type=modifier；target=effect:shield；effect=shield_up；value=10

@@ -1,0 +1,5 @@
+﻿id,类型,敌人ID,战斗配置ID,权重/规则,其他字段
+qi_refining_normal,normal,steel_fang_wolf、fire_tail_wolf、rock_shell_tortoise、withered_vine_spirit、ember_dust_moth、dusk_beak_crow,,,enemy_count=1
+qi_refining_elite,elite,iron_bark_guardian、blood_root_demon、seal_bearing_enforcer,,,enemy_count=1
+qi_refining_duo,normal,steel_fang_wolf、fire_tail_wolf、withered_vine_spirit、ember_dust_moth、dusk_beak_crow,,,enemy_count=2
+qi_refining_boss,boss,black_tide_chief,,,enemy_count=1

@@ -1,0 +1,52 @@
+{
+  "statuses": [
+    {
+      "id": "flame_seed",
+      "name": "火种",
+      "type": "resource",
+      "description": "可被引燃消耗，以追加伤害。"
+    },
+    {
+      "id": "attack_up",
+      "name": "攻击提升",
+      "type": "buff",
+      "description": "在指定次数的攻击中提高造成的伤害。"
+    },
+    {
+      "id": "defense_up",
+      "name": "防御提升",
+      "type": "buff",
+      "description": "在指定次数的受击中降低受到的伤害。"
+    },
+    {
+      "id": "charged",
+      "name": "蓄势",
+      "type": "resource",
+      "description": "力量尚未发出，下一击将承接这股蓄势。"
+    },
+    {
+      "id": "terrain",
+      "name": "地势",
+      "type": "resource",
+      "description": "由土系守御积累，可被强力土系神通消耗。"
+    },
+    {
+      "id": "sharpness",
+      "name": "锋锐",
+      "type": "resource",
+      "description": "锐金神通积累的锋芒，可被斩杀类神通消耗并放大伤害。"
+    },
+    {
+      "id": "vitality",
+      "name": "生机",
+      "type": "resource",
+      "description": "青木神通积累的生命力，可转化为治疗、护盾或持续攻势。"
+    },
+    {
+      "id": "flow",
+      "name": "回流",
+      "type": "resource",
+      "description": "清水神通形成的循环势能，可提高后续神通的资源效率。"
+    }
+  ]
+}

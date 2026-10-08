@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="灵枢 Roguelike Demo"
+run/main_scene="res://scenes/ui/MainMenu.tscn"
+config/features=PackedStringArray("4.7")
+config/icon="res://assets/branding/app_icon.png"
+
+[autoload]
+
+RunState="*res://scripts/state/run_state.gd"
+AudioDirector="*res://scripts/audio/audio_director.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=3
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/size/initial_width=1280
+window/size/initial_height=720
+
+[gui]
+
+timers/tooltip_delay_sec=0.18
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

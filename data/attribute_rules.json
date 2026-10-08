@@ -1,0 +1,10 @@
+{
+  "default_multiplier": 1.0,
+  "relationships": [
+    {"attacker": "metal", "defender": "wood", "multiplier": 1.5},
+    {"attacker": "wood", "defender": "earth", "multiplier": 1.5},
+    {"attacker": "earth", "defender": "water", "multiplier": 1.5},
+    {"attacker": "water", "defender": "fire", "multiplier": 1.5},
+    {"attacker": "fire", "defender": "metal", "multiplier": 1.5}
+  ]
+}

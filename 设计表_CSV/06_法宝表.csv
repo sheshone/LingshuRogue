@@ -1,0 +1,17 @@
+﻿id,名称,图标ID,标签,描述,触发与效果,原始效果字段
+sword_nurturing_gourd,养剑葫,sword_nurturing_gourd,金、sharpness,每场战斗开始时获得1层锋锐。,1. 触发效果 [trigger=battle_start；effect=type=add_status；status=sharpness；value=1；target=自身],1. type=trigger_effect；trigger=battle_start；effect=type=add_status；status=sharpness；value=1；target=自身
+verdant_spirit_cauldron,青木小鼎,♨,木、vitality,每回合开始时获得1层生机。,1. 触发效果 [trigger=turn_start；effect=type=add_status；status=vitality；value=1；target=自身],1. type=trigger_effect；trigger=turn_start；effect=type=add_status；status=vitality；value=1；target=自身
+spirit_focus_seal,定神印,印,sense、build,神识容量提高2。,1. 规则修正 2 →player_rule:spiritual_sense_capacity [effect=capacity_up],1. type=modifier；target=player_rule:spiritual_sense_capacity；effect=capacity_up；value=2
+golden_edge_whetstone,砺金石,◇,金、attack,所有带金行标签的神通基础伤害提高20%。,1. 规则修正 20 →spell_tag:metal [effect=damage_up],1. type=modifier；target=spell_tag:metal；effect=damage_up；value=20
+earth_anchor_seal,镇岳印,山,土、shield,回合结束时保留75%护盾。,1. 规则修正 75 →battle_rule:shield_retention [effect=retention_set],1. type=modifier；target=battle_rule:shield_retention；effect=retention_set；value=75
+tidal_droplet,潮生滴,滴,水、resource,每回合开始时额外凝聚1点水灵气。,1. 触发效果 [trigger=turn_start；effect=type=add_sea_qi；qi=水；value=1；target=自身],1. type=trigger_effect；trigger=turn_start；effect=type=add_sea_qi；qi=水；value=1；target=自身
+five_element_compass,五行罗盘,five_element_compass,universal、retain_qi,丹田灵气的回合保留比例提高10%。,1. 规则修正 10 →battle_rule:sea_retention [effect=retention_up],1. type=modifier；target=battle_rule:sea_retention；effect=retention_up；value=10
+vein_stabilizing_stone,镇脉石,石,universal、shield,每场战斗开始时获得4点护盾。,1. 触发效果 [trigger=battle_start；effect=type=shield；value=4；target=自身],1. type=trigger_effect；trigger=battle_start；effect=type=shield；value=4；target=自身
+green_sprout_pendant,青芽坠,芽,木、heal,每场战斗开始时恢复3点生命。,1. 触发效果 [trigger=battle_start；effect=type=heal；value=3；target=自身],1. type=trigger_effect；trigger=battle_start；effect=type=heal；value=3；target=自身
+scarlet_flame_pearl,赤炎珠,珠,火、flame_seed,每场战斗开始时获得1层火种。,1. 触发效果 [trigger=battle_start；effect=type=add_status；status=flame_seed；value=1；target=自身],1. type=trigger_effect；trigger=battle_start；effect=type=add_status；status=flame_seed；value=1；target=自身
+black_tortoise_armor,玄武甲,甲,土、shield,回合结束时保留50%护盾。,1. 规则修正 50 →battle_rule:shield_retention [effect=retention_set],1. type=modifier；target=battle_rule:shield_retention；effect=retention_set；value=50
+mystic_water_bottle,玄水瓶,壶,水、retain_qi,丹田灵气的回合保留比例提高25%。,1. 规则修正 25 →battle_rule:sea_retention [effect=retention_up],1. type=modifier；target=battle_rule:sea_retention；effect=retention_up；value=25
+echoing_dharma_mirror,复法镜,mirror,rule、repeat,每回合施展的第一个神通，其伤害、护盾与治疗效果会以一半威力再发生一次。,1. 规则修正 50 →battle_rule:first_spell [effect=repeat_percent],1. type=modifier；target=battle_rule:first_spell；effect=repeat_percent；value=50
+hollow_valley_cup,空谷盏,cup,rule、empty_qi,每回合第一次将丹田灵气恰好用尽时，获得5点护盾。,1. 规则修正 5 →battle_rule:empty_sea [effect=shield_once_per_turn],1. type=modifier；target=battle_rule:empty_sea；effect=shield_once_per_turn；value=5
+returning_light_lamp,回光灯,lamp,rule、survival,每场战斗第一次受到致命伤害时，保留1点生命并获得6点护盾。,1. 规则修正 6 →battle_rule:lethal_damage [effect=survive_once],1. type=modifier；target=battle_rule:lethal_damage；effect=survive_once；value=6
+karma_balance,因果衡,balance,rule、conversion,施展神通时，若其中含有伤害效果，同时获得其基础伤害总值25%的护盾。,1. 规则修正 25 →spell_rule:any [effect=damage_to_shield_percent],1. type=modifier；target=spell_rule:any；effect=damage_to_shield_percent；value=25

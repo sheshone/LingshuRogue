@@ -1,0 +1,29 @@
+﻿# Godot generated cache
+.godot/
+
+# Generated builds and temporary files
+build/
+tmp/
+.ui_check/
+artifacts/
+outputs/
+
+# Duplicate archive
+设计表_CSV.zip
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key

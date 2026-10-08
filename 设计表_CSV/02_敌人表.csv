@@ -1,0 +1,42 @@
+﻿id,名称,单位类型,最大生命,属性倾向,神通ID,能力ID,储物袋,行动逻辑,奖励表ID,阶段预留,姿态预留
+training_puppet,试炼木傀,傀儡,10,,,puppet_strike,,"策略：sequence
+1. ability:puppet_strike",training_puppet_rewards,,
+bandit,强盗,修士,40,,,bandit_slash、bandit_guard,water_talisman=1,"策略：sequence
+1. ability:bandit_slash
+2. ability:bandit_guard
+3. item:water_talisman",bandit_rewards,,
+steel_fang_wolf,钢齿狼,妖兽,24,金=1.0,,steel_fang_bite,,"策略：sequence
+1. ability:steel_fang_bite",steel_fang_wolf_rewards,,
+fire_tail_wolf,火尾狼,妖兽,24,火=1.0,,fire_tail_sweep,,"策略：sequence
+1. ability:fire_tail_sweep",fire_tail_wolf_rewards,,
+rock_shell_tortoise,岩甲灵龟,妖兽,34,土=1.0,,tortoise_ram、stone_shell_guard,,"策略：sequence
+1. ability:tortoise_ram
+2. ability:stone_shell_guard",qi_refining_no_reward,,
+withered_vine_spirit,枯藤精,妖兽,28,木=1.0,,vine_lash、life_siphon,,"策略：sequence
+1. ability:vine_lash
+2. ability:life_siphon",qi_refining_no_reward,,
+ember_dust_moth,火尘灵蛾,妖兽,22,火=1.0,,burning_dust、rousing_wings,,"策略：sequence
+1. ability:rousing_wings
+2. ability:burning_dust",qi_refining_no_reward,,
+dusk_beak_crow,暮喙鸦,妖兽,24,金=1.0,,circling_charge、metal_dive,,"策略：sequence
+1. ability:circling_charge
+2. ability:metal_dive",qi_refining_no_reward,,
+iron_bark_guardian,铁皮木卫,傀儡,54,木=0.6；金=0.4,,guardian_growth、guardian_iron_bark,,"策略：sequence
+1. ability:guardian_growth
+2. ability:guardian_iron_bark",qi_refining_elite_demo_rewards,,growth、iron_bark
+blood_root_demon,血根妖株,妖兽,52,木=1.0,,blood_vine_pierce、demonic_bloom,,"策略：sequence
+1. ability:blood_vine_pierce
+2. ability:blood_vine_pierce
+3. ability:demonic_bloom",qi_refining_elite_demo_rewards,,
+seal_bearing_enforcer,执符巡使,修士,50,土=0.6；水=0.4,,seal_guard、measured_strike,water_talisman=2；recovery_talisman=1,"策略：sequence
+1. ability:measured_strike
+2. ability:seal_guard
+3. item:water_talisman
+4. item:recovery_talisman",qi_refining_elite_demo_rewards,,
+black_tide_chief,黑潮寨主,修士,90,水=0.7；金=0.3,,black_water_blade、tide_guard、cold_edge_art、black_tide_recovery,water_talisman=2；recovery_talisman=1,"策略：sequence
+1. ability:black_water_blade
+2. ability:tide_guard
+3. item:water_talisman
+4. ability:cold_edge_art
+5. ability:black_tide_recovery",qi_refining_boss_rewards,"1. id=probing；condition=default
+2. id=desperate；condition=future_hp_threshold",

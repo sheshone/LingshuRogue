@@ -1,0 +1,42 @@
+{
+  "node_offer_tables": [
+    {
+      "id": "qi_refining_shop",
+      "offer_count": 8,
+      "affinity_bonus": 5,
+      "entries": [
+        {"id":"shop_water_talisman","name":"水波符","description":"符纸化作水浪，造成水行伤害。","spirit_stone_cost":12,"weight":16,"tags":["water"],"effects":[{"type":"add_item","item_id":"water_talisman","quantity":1}]},
+        {"id":"shop_recovery_talisman","name":"回元符","description":"催动后回转气血。","spirit_stone_cost":15,"weight":15,"effects":[{"type":"add_item","item_id":"recovery_talisman","quantity":1}]},
+        {"id":"shop_vitality_pill","name":"养元丹","description":"药力温和，可在战中稳住伤势。","spirit_stone_cost":22,"weight":13,"tags":["wood"],"effects":[{"type":"add_item","item_id":"vitality_pill","quantity":1}]},
+        {"id":"shop_fireball","name":"火弹术残卷","description":"凝火成丸，直取敌身。","spirit_stone_cost":28,"weight":10,"tags":["fire"],"effects":[{"type":"learn_spell","spell_id":"fireball"}]},
+        {"id":"shop_water_cycle","name":"周天水引残卷","description":"引水行周天，令余气再生。","spirit_stone_cost":32,"weight":9,"tags":["water"],"effects":[{"type":"learn_spell","spell_id":"water_cycle"}]},
+        {"id":"shop_golden_arc","name":"流金剑弧残卷","description":"锐金成弧，横扫眼前诸敌。","spirit_stone_cost":34,"weight":8,"tags":["metal"],"effects":[{"type":"learn_spell","spell_id":"golden_arc"}]},
+        {"id":"shop_wooden_aegis","name":"藤甲术残卷","description":"催生灵藤，织甲护身。","spirit_stone_cost":30,"weight":9,"tags":["wood"],"effects":[{"type":"learn_spell","spell_id":"wooden_aegis"}]},
+        {"id":"shop_rock_reversal","name":"撼山反震残卷","description":"收束护势，再以山力倾泻。","spirit_stone_cost":38,"weight":7,"tags":["earth"],"effects":[{"type":"learn_spell","spell_id":"rock_reversal"}]},
+        {"id":"shop_compass","name":"五行罗盘","description":"回合结束时，丹田多留一成余气。","spirit_stone_cost":58,"weight":4,"effects":[{"type":"add_relic","relic_id":"five_element_compass"}]},
+        {"id":"shop_focus_seal","name":"定神印","description":"神识容量提高2。","spirit_stone_cost":76,"weight":2,"effects":[{"type":"add_relic","relic_id":"spirit_focus_seal"}]},
+        {"id":"shop_whetstone","name":"砺金石","description":"金行神通造成的伤害提高两成。","spirit_stone_cost":62,"weight":3,"tags":["metal"],"effects":[{"type":"add_relic","relic_id":"golden_edge_whetstone"}]},
+        {"id":"shop_earth_to_fire","name":"赤砂换脉","description":"将5点土灵气洗炼为火灵气。","spirit_stone_cost":10,"weight":8,"tags":["fire"],"effects":[{"type":"convert_core_qi","from_qi":"earth","to_qi":"fire","value":5}]},
+        {"id":"shop_water_to_wood","name":"润木换脉","description":"将5点水灵气引渡为木灵气。","spirit_stone_cost":10,"weight":8,"tags":["wood"],"effects":[{"type":"convert_core_qi","from_qi":"water","to_qi":"wood","value":5}]},
+        {"id":"shop_forget_qi_strike","name":"洗诀香","description":"焚香静坐，遗忘灵气冲击。","spirit_stone_cost":8,"weight":5,"effects":[{"type":"forget_spell","spell_id":"qi_strike"}]}
+      ]
+    },
+    {
+      "id": "qi_refining_treasure",
+      "offer_count": 3,
+      "affinity_bonus": 3,
+      "entries": [
+        {"id":"chest_stone","name":"镇脉石","description":"战斗开始时获得4点护盾。","weight":8,"effects":[{"type":"add_relic","relic_id":"vein_stabilizing_stone"}]},
+        {"id":"chest_sprout","name":"青芽坠","description":"战斗开始时恢复3点生命。","weight":7,"tags":["wood"],"effects":[{"type":"add_relic","relic_id":"green_sprout_pendant"}]},
+        {"id":"chest_guard","name":"五行护体诀","description":"引五行余气护住周身。","weight":10,"effects":[{"type":"learn_spell","spell_id":"five_element_guard"}]},
+        {"id":"chest_flash","name":"断脉闪","description":"锋芒一线，直断灵脉。","weight":5,"tags":["metal"],"effects":[{"type":"learn_spell","spell_id":"meridian_severing_flash"}]},
+        {"id":"chest_bloom","name":"生生化元","description":"木气生发，伤势随之弥合。","weight":5,"tags":["wood"],"effects":[{"type":"learn_spell","spell_id":"life_bloom"}]},
+        {"id":"chest_stones","name":"旧主灵石袋","description":"袋中尚余45枚灵石。","weight":12,"effects":[{"type":"add_spirit_stones","value":45}]},
+        {"id":"chest_fire_qi","name":"赤霞灵砂","description":"灵枢 · 火 +15","weight":10,"tags":["fire"],"effects":[{"type":"add_core_qi","qi":"fire","value":15}]},
+        {"id":"chest_water_qi","name":"寒潭髓露","description":"灵枢 · 水 +15","weight":10,"tags":["water"],"effects":[{"type":"add_core_qi","qi":"water","value":15}]},
+        {"id":"chest_core","name":"赤炎妖丹","description":"获得赤炎妖丹1枚。","weight":12,"tags":["fire"],"effects":[{"type":"add_item","item_id":"red_flame_core","quantity":1}]},
+        {"id":"chest_talisman","name":"符箓小匣","description":"获得水波符与回元符各1张。","weight":13,"effects":[{"type":"add_item","item_id":"water_talisman","quantity":1},{"type":"add_item","item_id":"recovery_talisman","quantity":1}]}
+      ]
+    }
+  ]
+}

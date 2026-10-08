@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/chapter_complete_ui.gd" id="1"]
+[ext_resource type="Theme" path="res://assets/ui/battle_theme.tres" id="2"]
+
+[node name="ChapterComplete" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2")
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.025, 0.045, 0.043, 1)
+
+[node name="Mountains" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 420, 130, 290, 250, 390, 410, 225, 570, 375, 730, 255, 960, 395, 960, 540, 0, 540)
+color = Color(0.09, 0.16, 0.14, 0.75)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Center"]
+custom_minimum_size = Vector2(460, 340)
+layout_mode = 2
+theme_type_variation = &"ArtPanel"
+
+[node name="Content" type="VBoxContainer" parent="Center/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Seal" type="Label" parent="Center/Panel/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.25, 0.2, 1)
+theme_override_font_sizes/font_size = 22
+text = "◈"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="Center/Panel/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "炼气篇 · 圆满"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Center/Panel/Content"]
+layout_mode = 2
+text = "气贯周天，玄关已开。前路筑基，尚待续写。"
+horizontal_alignment = 1
+
+[node name="SummaryLabel" type="Label" parent="Center/Panel/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+text = "本局结算"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="Center/Panel/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "再启炼气之旅"
+
+[node name="MainMenuButton" type="Button" parent="Center/Panel/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+text = "返回主界面"

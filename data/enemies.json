@@ -1,0 +1,258 @@
+{
+  "enemies": [
+    {
+      "id": "training_puppet",
+      "name": "试炼木傀",
+      "unit_type": "construct",
+      "max_hp": 10,
+      "attributes": {"tendencies": {}},
+      "skills": {"spell_ids": [], "ability_ids": ["puppet_strike"]},
+      "inventory": {},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "puppet_strike"}
+        ]
+      },
+      "reward_table_id": "training_puppet_rewards"
+    },
+    {
+      "id": "bandit",
+      "name": "强盗",
+      "unit_type": "cultivator",
+      "max_hp": 40,
+      "attributes": {"tendencies": {}},
+      "skills": {"spell_ids": [], "ability_ids": ["bandit_slash", "bandit_guard"]},
+      "inventory": {"water_talisman": 1},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "bandit_slash"},
+          {"source_type": "ability", "source_id": "bandit_guard"},
+          {"source_type": "item", "source_id": "water_talisman"}
+        ]
+      },
+      "reward_table_id": "bandit_rewards"
+    },
+    {
+      "id": "steel_fang_wolf",
+      "name": "钢齿狼",
+      "unit_type": "beast",
+      "max_hp": 24,
+      "attributes": {"primary": "metal", "tendencies": {"metal": 1.0}},
+      "skills": {"spell_ids": [], "ability_ids": ["steel_fang_bite"]},
+      "inventory": {},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "steel_fang_bite"}
+        ]
+      },
+      "reward_table_id": "steel_fang_wolf_rewards"
+    },
+    {
+      "id": "fire_tail_wolf",
+      "name": "火尾狼",
+      "unit_type": "beast",
+      "max_hp": 24,
+      "attributes": {"primary": "fire", "tendencies": {"fire": 1.0}},
+      "skills": {"spell_ids": [], "ability_ids": ["fire_tail_sweep"]},
+      "inventory": {},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "fire_tail_sweep"}
+        ]
+      },
+      "reward_table_id": "fire_tail_wolf_rewards"
+    },
+    {
+      "id": "rock_shell_tortoise",
+      "name": "岩甲灵龟",
+      "category": "normal",
+      "unit_type": "beast",
+      "realm": "qi_refining",
+      "max_hp": 34,
+      "attributes": {"primary": "earth", "tendencies": {"earth": 1.0}},
+      "skills": {"spell_ids": [], "ability_ids": ["tortoise_ram", "stone_shell_guard"]},
+      "inventory": {},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "tortoise_ram"},
+          {"source_type": "ability", "source_id": "stone_shell_guard"}
+        ]
+      },
+      "reward_table_id": "qi_refining_no_reward",
+      "phases": [],
+      "stances": []
+    },
+    {
+      "id": "withered_vine_spirit",
+      "name": "枯藤精",
+      "category": "normal",
+      "unit_type": "beast",
+      "realm": "qi_refining",
+      "max_hp": 28,
+      "attributes": {"primary": "wood", "tendencies": {"wood": 1.0}},
+      "skills": {"spell_ids": [], "ability_ids": ["vine_lash", "life_siphon"]},
+      "inventory": {},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "vine_lash"},
+          {"source_type": "ability", "source_id": "life_siphon"}
+        ]
+      },
+      "reward_table_id": "qi_refining_no_reward",
+      "phases": [],
+      "stances": []
+    },
+    {
+      "id": "ember_dust_moth",
+      "name": "火尘灵蛾",
+      "category": "normal",
+      "unit_type": "beast",
+      "realm": "qi_refining",
+      "max_hp": 22,
+      "attributes": {"primary": "fire", "tendencies": {"fire": 1.0}},
+      "skills": {"spell_ids": [], "ability_ids": ["burning_dust", "rousing_wings"]},
+      "inventory": {},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "rousing_wings"},
+          {"source_type": "ability", "source_id": "burning_dust"}
+        ]
+      },
+      "reward_table_id": "qi_refining_no_reward",
+      "phases": [],
+      "stances": []
+    },
+    {
+      "id": "dusk_beak_crow",
+      "name": "暮喙鸦",
+      "category": "normal",
+      "unit_type": "beast",
+      "realm": "qi_refining",
+      "max_hp": 24,
+      "attributes": {"primary": "metal", "tendencies": {"metal": 1.0}},
+      "skills": {"spell_ids": [], "ability_ids": ["circling_charge", "metal_dive"]},
+      "inventory": {},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "circling_charge"},
+          {"source_type": "ability", "source_id": "metal_dive"}
+        ]
+      },
+      "reward_table_id": "qi_refining_no_reward",
+      "phases": [],
+      "stances": []
+    },
+    {
+      "id": "iron_bark_guardian",
+      "name": "铁皮木卫",
+      "category": "elite",
+      "unit_type": "construct",
+      "realm": "qi_refining",
+      "max_hp": 54,
+      "attributes": {"primary": "wood", "tendencies": {"wood": 0.6, "metal": 0.4}},
+      "skills": {"spell_ids": [], "ability_ids": ["guardian_growth", "guardian_iron_bark"]},
+      "inventory": {},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "guardian_growth"},
+          {"source_type": "ability", "source_id": "guardian_iron_bark"}
+        ]
+      },
+      "reward_table_id": "qi_refining_elite_demo_rewards",
+      "phases": [],
+      "stances": ["growth", "iron_bark"]
+    },
+    {
+      "id": "blood_root_demon",
+      "name": "血根妖株",
+      "category": "elite",
+      "unit_type": "beast",
+      "realm": "qi_refining",
+      "max_hp": 52,
+      "attributes": {"primary": "wood", "tendencies": {"wood": 1.0}},
+      "skills": {"spell_ids": [], "ability_ids": ["blood_vine_pierce", "demonic_bloom"]},
+      "inventory": {},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "blood_vine_pierce"},
+          {"source_type": "ability", "source_id": "blood_vine_pierce"},
+          {"source_type": "ability", "source_id": "demonic_bloom"}
+        ]
+      },
+      "reward_table_id": "qi_refining_elite_demo_rewards",
+      "phases": [],
+      "stances": []
+    },
+    {
+      "id": "seal_bearing_enforcer",
+      "name": "执符巡使",
+      "category": "elite",
+      "unit_type": "cultivator",
+      "realm": "qi_refining",
+      "max_hp": 50,
+      "attributes": {"primary": "earth", "tendencies": {"earth": 0.6, "water": 0.4}},
+      "skills": {"spell_ids": [], "ability_ids": ["seal_guard", "measured_strike"]},
+      "inventory": {"water_talisman": 2, "recovery_talisman": 1},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "measured_strike"},
+          {"source_type": "ability", "source_id": "seal_guard"},
+          {"source_type": "item", "source_id": "water_talisman"},
+          {"source_type": "item", "source_id": "recovery_talisman"}
+        ]
+      },
+      "reward_table_id": "qi_refining_elite_demo_rewards",
+      "phases": [],
+      "stances": []
+    },
+    {
+      "id": "black_tide_chief",
+      "name": "黑潮寨主",
+      "category": "boss",
+      "unit_type": "cultivator",
+      "realm": "qi_refining",
+      "max_hp": 90,
+      "attributes": {"primary": "water", "tendencies": {"water": 0.7, "metal": 0.3}},
+      "skills": {"spell_ids": [], "ability_ids": ["black_water_blade", "tide_guard", "cold_edge_art", "black_tide_recovery"]},
+      "inventory": {"water_talisman": 2, "recovery_talisman": 1},
+      "action_policy": {
+        "type": "sequence",
+        "actions": [
+          {"source_type": "ability", "source_id": "black_water_blade"},
+          {"source_type": "ability", "source_id": "tide_guard"},
+          {"source_type": "item", "source_id": "water_talisman"},
+          {"source_type": "ability", "source_id": "cold_edge_art"},
+          {"source_type": "ability", "source_id": "black_tide_recovery"}
+        ],
+        "phases": [
+          {
+            "hp_ratio_lte": 0.5,
+            "actions": [
+              {"source_type": "ability", "source_id": "tide_guard"},
+              {"source_type": "ability", "source_id": "cold_edge_art"},
+              {"source_type": "ability", "source_id": "black_water_blade"},
+              {"source_type": "ability", "source_id": "black_tide_recovery"}
+            ]
+          }
+        ]
+      },
+      "reward_table_id": "qi_refining_boss_rewards",
+      "phases": [
+        {"id": "probing", "condition": "default"},
+        {"id": "desperate", "condition": "future_hp_threshold"}
+      ],
+      "stances": []
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "spells": [
+    {
+      "id": "honing_breath",
+      "sense_cost": 1,
+      "name": "磨锋吐纳",
+      "description": "以金气试锋，造成少量伤害并积累1层锋锐。锋锐可被断脉闪消耗。",
+      "tags": ["metal", "attack", "mechanism"],
+      "cost": {"metal": 2},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "metal", "value": 6, "target": "opponent"},
+        {"type": "add_status", "status": "sharpness", "value": 1, "target": "self"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "meridian_severing_flash",
+      "sense_cost": 2,
+      "name": "断脉闪",
+      "description": "消耗全部锋锐发动斩击；目标生命过半时追加一次收割伤害。",
+      "tags": ["metal", "attack", "finisher"],
+      "cost": {"metal": 3},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "metal", "value": 9, "target": "opponent", "scaling": {"source": "status", "status": "sharpness", "target": "self", "per_point": 4}},
+        {"type": "damage", "attribute": "metal", "value": 6, "target": "opponent", "condition": {"hp_ratio_lte": {"target": "opponent", "value": 0.5}}},
+        {"type": "consume_status", "status": "sharpness", "all": true, "target": "self"}
+      ],
+      "rarity": "rare"
+    },
+    {
+      "id": "sprouting_guard",
+      "sense_cost": 1,
+      "name": "萌芽护身",
+      "description": "获得护盾并积累1层生机，使青木构筑在防守时也能成长。",
+      "tags": ["wood", "defense", "mechanism"],
+      "cost": {"wood": 2},
+      "requirements": {},
+      "effects": [
+        {"type": "shield", "value": 5, "target": "self"},
+        {"type": "add_status", "status": "vitality", "value": 1, "target": "self"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "life_bloom",
+      "sense_cost": 2,
+      "name": "生生化元",
+      "description": "消耗全部生机恢复生命并获得护盾，生机越多收益越高。",
+      "tags": ["wood", "heal", "finisher"],
+      "cost": {"wood": 3},
+      "requirements": {},
+      "effects": [
+        {"type": "heal", "value": 4, "target": "self", "scaling": {"source": "status", "status": "vitality", "target": "self", "per_point": 2}},
+        {"type": "shield", "value": 4, "target": "self", "scaling": {"source": "status", "status": "vitality", "target": "self", "per_point": 2}},
+        {"type": "consume_status", "status": "vitality", "all": true, "target": "self"}
+      ],
+      "rarity": "rare"
+    },
+    {
+      "id": "ember_guard",
+      "sense_cost": 1,
+      "name": "余烬护身",
+      "description": "以余火护体并留下1层火种，让防御回合也为爆发铺垫。",
+      "tags": ["fire", "defense", "mechanism"],
+      "cost": {"fire": 2},
+      "requirements": {},
+      "effects": [
+        {"type": "shield", "value": 5, "target": "self"},
+        {"type": "add_status", "status": "flame_seed", "value": 1, "target": "self"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "wildfire_wave",
+      "sense_cost": 2,
+      "name": "流火燎原",
+      "description": "火浪席卷所有敌人并留下火种，兼顾群攻与下一轮爆发。",
+      "tags": ["fire", "attack", "area", "mechanism"],
+      "cost": {"fire": 3},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "fire", "value": 8, "target": "all_opponents"},
+        {"type": "add_status", "status": "flame_seed", "value": 1, "target": "self"}
+      ],
+      "rarity": "rare"
+    },
+    {
+      "id": "rock_reversal",
+      "sense_cost": 2,
+      "name": "撼山反震",
+      "description": "将当前护盾转为反震伤害并消耗全部护盾，形成厚土的爆发窗口。",
+      "tags": ["earth", "attack", "finisher"],
+      "cost": {"earth": 2},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "earth", "value": 3, "target": "opponent", "scaling": {"source": "shield", "target": "self", "per_point": 1}},
+        {"type": "consume_shield", "all": true, "target": "self"}
+      ],
+      "rarity": "rare"
+    },
+    {
+      "id": "mountain_guard",
+      "sense_cost": 1,
+      "name": "镇岳式",
+      "description": "建立厚重防线并积累地势，是守御与山崩术的共同组件。",
+      "tags": ["earth", "defense", "shield", "mechanism"],
+      "cost": {"earth": 3},
+      "requirements": {},
+      "effects": [
+        {"type": "shield", "value": 11, "target": "self"},
+        {"type": "add_status", "status": "terrain", "value": 1, "target": "self"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "water_cycle",
+      "sense_cost": 1,
+      "name": "周天水引",
+      "description": "水气沿经脉回转：造成伤害，返还水灵气并积累回流。",
+      "tags": ["water", "attack", "flow", "mechanism"],
+      "cost": {"water": 3},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "water", "value": 7, "target": "opponent"},
+        {"type": "add_sea_qi", "qi": "water", "value": 1, "target": "self"},
+        {"type": "add_status", "status": "flow", "value": 1, "target": "self"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "five_phase_exchange",
+      "sense_cost": 1,
+      "name": "五气归流",
+      "description": "消耗任意灵气并凝成水灵气，同时获得护盾，修正不利的丹田随机结果。",
+      "tags": ["water", "resource", "defense"],
+      "cost": {"any_qi": 3},
+      "requirements": {},
+      "effects": [
+        {"type": "add_sea_qi", "qi": "water", "value": 1, "target": "self"},
+        {"type": "shield", "value": 4, "target": "self"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "golden_arc",
+      "sense_cost": 1,
+      "name": "流金剑弧",
+      "description": "金气化弧横扫群敌，是稳定的炼气期群攻手段。",
+      "tags": ["metal", "attack", "area"],
+      "cost": {"metal": 3},
+      "requirements": {},
+      "effects": [{"type": "damage", "attribute": "metal", "value": 8, "target": "all_opponents"}],
+      "rarity": "common"
+    },
+    {
+      "id": "metallic_guard",
+      "sense_cost": 1,
+      "name": "金光护体",
+      "description": "以金气凝成护体辉光，立即获得护盾。",
+      "tags": ["metal", "defense", "shield"],
+      "cost": {"metal": 2},
+      "requirements": {},
+      "effects": [{"type": "shield", "value": 7, "target": "self"}],
+      "rarity": "common"
+    },
+    {
+      "id": "verdant_recovery",
+      "sense_cost": 1,
+      "name": "青木回春术",
+      "description": "引木气滋养经脉，在战斗中恢复少量生命。",
+      "tags": ["wood", "heal"],
+      "cost": {"wood": 2},
+      "requirements": {},
+      "effects": [{"type": "heal", "value": 6, "target": "self"}],
+      "rarity": "common"
+    },
+    {
+      "id": "wooden_aegis",
+      "sense_cost": 1,
+      "name": "藤甲术",
+      "description": "催生灵藤缠绕周身，形成一层柔韧防护。",
+      "tags": ["wood", "defense", "shield"],
+      "cost": {"wood": 2},
+      "requirements": {},
+      "effects": [{"type": "shield", "value": 7, "target": "self"}],
+      "rarity": "common"
+    },
+    {
+      "id": "five_element_guard",
+      "sense_cost": 1,
+      "name": "五行护体诀",
+      "description": "以任意灵气稳固周身气机，获得基础护盾。",
+      "tags": ["universal", "defense", "shield"],
+      "cost": {"any_qi": 2},
+      "requirements": {},
+      "effects": [{"type": "shield", "value": 6, "target": "self"}],
+      "rarity": "common"
+    },
+    {
+      "id": "qi_strike",
+      "sense_cost": 1,
+      "replaceable": false,
+      "name": "灵气冲击",
+      "description": "耗尽当前丹田灵气发动一次微弱冲击；每消耗3点灵气，伤害提高1点。",
+      "tags": ["basic", "attack"],
+      "cost": {"all_sea_qi": true, "minimum": 1},
+      "requirements": {},
+      "effects": [
+        {
+          "type": "damage",
+          "value": 2,
+          "target": "opponent",
+          "scaling": {"source": "spent_qi_total", "points_per_bonus": 3, "per_point": 1}
+        }
+      ],
+      "rarity": "basic"
+    },
+    {
+      "id": "metal_edge_art",
+      "sense_cost": 1,
+      "name": "金刃术",
+      "description": "凝聚金灵气化作锋刃攻击目标。",
+      "tags": ["metal", "attack"],
+      "cost": {"metal": 2},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "metal", "value": 11, "target": "opponent"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "wood_thorn_art",
+      "sense_cost": 1,
+      "name": "青藤刺",
+      "description": "催动木灵气生出锐藤刺向目标。",
+      "tags": ["wood", "attack"],
+      "cost": {"wood": 2},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "wood", "value": 10, "target": "opponent"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "fireball",
+      "sense_cost": 1,
+      "name": "火弹术",
+      "description": "凝聚一团火灵气射向目标。",
+      "tags": ["fire", "attack"],
+      "cost": {"fire": 2},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "fire", "value": 12, "target": "opponent"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "kindling_art",
+      "sense_cost": 1,
+      "name": "引火诀",
+      "description": "以火灵气灼伤目标，同时留下可供爆发的火种。",
+      "tags": ["fire", "attack", "mechanism"],
+      "cost": {"fire": 2},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "fire", "value": 6, "target": "opponent"},
+        {"type": "add_status", "status": "flame_seed", "value": 1, "target": "self"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "flame_burst",
+      "sense_cost": 2,
+      "name": "炎爆术",
+      "description": "引爆积蓄的火种；即使没有火种，也能造成基础火焰伤害。",
+      "tags": ["fire", "attack", "finisher"],
+      "cost": {"fire": 3},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "fire", "value": 12, "target": "opponent", "scaling": {"source": "status", "status": "flame_seed", "target": "self", "per_point": 5}},
+        {"type": "consume_status", "status": "flame_seed", "all": true, "target": "self"}
+      ],
+      "rarity": "rare"
+    },
+    {
+      "id": "body_protection",
+      "sense_cost": 1,
+      "name": "岩甲术",
+      "description": "引土灵气凝成岩甲护住周身，同时借岩势撞击目标。",
+      "tags": ["earth", "defense", "shield"],
+      "cost": {"earth": 2},
+      "requirements": {},
+      "effects": [
+        {"type": "shield", "value": 7, "target": "self"},
+        {"type": "damage", "attribute": "earth", "value": 6, "target": "opponent"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "terrain_art",
+      "sense_cost": 1,
+      "name": "地势诀",
+      "description": "借地势护体，并积蓄可供山崩术调用的地势。",
+      "tags": ["earth", "defense", "shield", "mechanism"],
+      "cost": {"earth": 2},
+      "requirements": {},
+      "effects": [
+        {"type": "shield", "value": 6, "target": "self"},
+        {"type": "add_status", "status": "terrain", "value": 1, "target": "self"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "mountain_collapse",
+      "sense_cost": 2,
+      "name": "山崩术",
+      "description": "引动积蓄的地势轰击目标；没有地势时仍可造成基础伤害。",
+      "tags": ["earth", "attack", "finisher"],
+      "cost": {"earth": 3},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "earth", "value": 10, "target": "opponent", "scaling": {"source": "status", "status": "terrain", "target": "self", "per_point": 4}},
+        {"type": "consume_status", "status": "terrain", "all": true, "target": "self"}
+      ],
+      "rarity": "rare"
+    },
+    {
+      "id": "water_arrow",
+      "sense_cost": 1,
+      "name": "水箭术",
+      "description": "将水灵气凝成箭矢，稳定冲击目标。",
+      "tags": ["water", "attack"],
+      "cost": {"water": 2},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "water", "value": 10, "target": "opponent"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "returning_flow",
+      "sense_cost": 1,
+      "name": "回流诀",
+      "description": "以两份水灵气推动回流，攻击后返还一份水灵气。",
+      "tags": ["water", "attack", "mechanism", "flow"],
+      "cost": {"water": 3},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "water", "value": 8, "target": "opponent"},
+        {"type": "add_sea_qi", "qi": "water", "value": 1, "target": "self"}
+      ],
+      "rarity": "common"
+    },
+    {
+      "id": "tidal_art",
+      "sense_cost": 2,
+      "name": "潮汐术",
+      "description": "引动潮汐，冲击所有敌人。",
+      "tags": ["water", "attack", "finisher", "area"],
+      "cost": {"water": 3},
+      "requirements": {},
+      "effects": [
+        {"type": "damage", "attribute": "water", "value": 12, "target": "all_opponents"}
+      ],
+      "rarity": "rare"
+    }
+  ]
+}

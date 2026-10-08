@@ -1,0 +1,16 @@
+{
+  "processing_recipes": [
+    {
+      "id": "refine_red_flame_core",
+      "consume": "red_flame_core",
+      "quantity": 1,
+      "effects": [{"type":"add_core_qi","qi":"fire","value":12}]
+    },
+    {
+      "id": "refine_steel_fang_core",
+      "consume": "steel_fang_core",
+      "quantity": 1,
+      "effects": [{"type":"add_core_qi","qi":"metal","value":12}]
+    }
+  ]
+}

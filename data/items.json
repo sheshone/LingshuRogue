@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "id": "water_talisman",
+      "type": "consumable",
+      "name": "水波符",
+      "description": "水灵力汇聚成波纹，向目标冲击。",
+      "combat_use": {
+        "effects": [
+          {"type": "damage", "attribute": "water", "value": 12, "target": "opponent"}
+        ]
+      }
+    },
+    {
+      "id": "steel_fang_core",
+      "type": "material",
+      "name": "钢齿妖丹",
+      "description": "残留着金行妖力的妖丹。",
+      "tags": ["core", "metal", "demon"],
+      "future_processing": []
+    },
+    {
+      "id": "recovery_talisman",
+      "type": "consumable",
+      "name": "回元符",
+      "description": "符中灵力回流周身，恢复使用者生命。",
+      "combat_use": {
+        "effects": [
+          {"type": "heal", "value": 10, "target": "self"}
+        ]
+      }
+    },
+    {
+      "id": "vitality_pill",
+      "type": "consumable",
+      "name": "养元丹",
+      "description": "炼气修士常备的疗伤丹药，药力温和持久。",
+      "combat_use": {"effects": [{"type":"heal","value":18,"target":"self"}]}
+    },
+    {
+      "id": "red_flame_core",
+      "type": "material",
+      "name": "赤炎妖丹",
+      "description": "蕴含火属性妖力的妖丹。",
+      "tags": ["core", "fire", "demon"],
+      "future_processing": []
+    }
+  ]
+}

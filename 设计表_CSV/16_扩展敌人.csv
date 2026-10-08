@@ -1,0 +1,11 @@
+﻿id,名称,级别,单位类型,属性倾向,生命压力,攻击压力,配套能力,行动循环,战斗定位,奖励表ID,状态
+mist_reed_crane,雾苇鹤,普通,妖兽,水,低,低,雾羽啄、敛翼藏雾,先以薄盾遮身，再寻找空隙啄击。,教学：防御意图不等于停止进攻。,mist_reed_crane_rewards,设计候选
+stoneback_ape,负碑石猿,普通,妖兽,土,中,中,碑拳、负石蓄势,蓄势后重击；受击会提前消耗蓄势换取护盾。,教学：观察爆发窗口。,stoneback_ape_rewards,设计候选
+golden_thread_spider,金丝妖蛛,普通,妖兽,金,低,中,金丝针、结茧,交替攻击与结茧，结茧后下一击更强。,教学：打断防御循环。,golden_thread_spider_rewards,设计候选
+char_horn_boar,炭角火豕,普通,妖兽,火,中,低,炭角冲、焦躁刨地,连续受击会积累焦躁，随后发动冲锋。,教学：控制输出节奏。,char_horn_boar_rewards,设计候选
+wandering_herbalist,采药散修,普通,修士,木,中,低,药锄、回春散,储物袋中携带一次治疗物品，受伤后使用。,教学：优先击杀与敌人物品。,wandering_herbalist_rewards,设计候选
+grave_moss_wraith,墓苔阴灵,普通,妖兽,木/阴,低,中,阴苔触、借尸回青,攻击后缓慢恢复；治疗可被爆发压制。,教学：持续战与治疗压力。,grave_moss_wraith_rewards,设计候选
+hundred_blade_roamer,百刃散人,精英,修士,金,高,中,藏剑、百刃落、破甲符,藏锋数回合后释放剑雨，也会消耗符箓破盾。,压力：计算防御资源与爆发时机。,hundred_blade_roamer_rewards,设计候选
+marsh_brood_mother,泽母妖蟾,精英,妖兽,水,高,高,湿毒吐息、鼓腹护卵、唤幼蟾,在攻击、恢复和召唤之间循环；幼蟾强化本体恢复。,压力：多目标优先级。,marsh_brood_mother_rewards,设计候选
+furnace_heart_golem,炉心石傀,精英,傀儡,火/土,高,高,炉甲、泄焰、熔心重锤,炉温逐轮上升，护盾与伤害交替增强；泄焰后出现输出窗口。,压力：姿态循环与爆发窗口。,furnace_heart_golem_rewards,设计候选
+five_vein_alchemist,五脉丹师,Boss,修士,五行,危险,危险,轮转丹火、错脉散、五气炉壁、逆炼归元、炸炉,按五行轮转改变下一行动；半血后开始逆炼，最终进入炸炉倒计时。,综合考验：资源规划、状态处理与阶段爆发。,five_vein_alchemist_rewards,设计候选

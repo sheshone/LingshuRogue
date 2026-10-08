@@ -1,0 +1,26 @@
+﻿id,节点类型,候选内容,权重,条件,其他字段
+qi_refining_shop,,"1. id=shop_water_talisman；name=水波符；description=符纸化作水浪，造成水行伤害。；spirit_stone_cost=12；weight=16；tags=水；effects=1. type=add_item；item_id=water_talisman；quantity=1
+2. id=shop_recovery_talisman；name=回元符；description=催动后回转气血。；spirit_stone_cost=15；weight=15；effects=1. type=add_item；item_id=recovery_talisman；quantity=1
+3. id=shop_vitality_pill；name=养元丹；description=药力温和，可在战中稳住伤势。；spirit_stone_cost=22；weight=13；tags=木；effects=1. type=add_item；item_id=vitality_pill；quantity=1
+4. id=shop_fireball；name=火弹术残卷；description=凝火成丸，直取敌身。；spirit_stone_cost=28；weight=10；tags=火；effects=1. type=learn_spell；spell_id=fireball
+5. id=shop_water_cycle；name=周天水引残卷；description=引水行周天，令余气再生。；spirit_stone_cost=32；weight=9；tags=水；effects=1. type=learn_spell；spell_id=water_cycle
+6. id=shop_golden_arc；name=流金剑弧残卷；description=锐金成弧，横扫眼前诸敌。；spirit_stone_cost=34；weight=8；tags=金；effects=1. type=learn_spell；spell_id=golden_arc
+7. id=shop_wooden_aegis；name=藤甲术残卷；description=催生灵藤，织甲护身。；spirit_stone_cost=30；weight=9；tags=木；effects=1. type=learn_spell；spell_id=wooden_aegis
+8. id=shop_rock_reversal；name=撼山反震残卷；description=收束护势，再以山力倾泻。；spirit_stone_cost=38；weight=7；tags=土；effects=1. type=learn_spell；spell_id=rock_reversal
+9. id=shop_compass；name=五行罗盘；description=回合结束时，丹田多留一成余气。；spirit_stone_cost=58；weight=4；effects=1. type=add_relic；relic_id=five_element_compass
+10. id=shop_focus_seal；name=定神印；description=神识容量提高2。；spirit_stone_cost=76；weight=2；effects=1. type=add_relic；relic_id=spirit_focus_seal
+11. id=shop_whetstone；name=砺金石；description=金行神通造成的伤害提高两成。；spirit_stone_cost=62；weight=3；tags=金；effects=1. type=add_relic；relic_id=golden_edge_whetstone
+12. id=shop_earth_to_fire；name=赤砂换脉；description=将5点土灵气洗炼为火灵气。；spirit_stone_cost=10；weight=8；tags=火；effects=1. type=convert_core_qi；from_qi=土；to_qi=火；value=5
+13. id=shop_water_to_wood；name=润木换脉；description=将5点水灵气引渡为木灵气。；spirit_stone_cost=10；weight=8；tags=木；effects=1. type=convert_core_qi；from_qi=水；to_qi=木；value=5
+14. id=shop_forget_qi_strike；name=洗诀香；description=焚香静坐，遗忘灵气冲击。；spirit_stone_cost=8；weight=5；effects=1. type=forget_spell；spell_id=qi_strike",,,offer_count=8；affinity_bonus=5
+qi_refining_treasure,,"1. id=chest_stone；name=镇脉石；description=战斗开始时获得4点护盾。；weight=8；effects=1. type=add_relic；relic_id=vein_stabilizing_stone
+2. id=chest_sprout；name=青芽坠；description=战斗开始时恢复3点生命。；weight=7；tags=木；effects=1. type=add_relic；relic_id=green_sprout_pendant
+3. id=chest_guard；name=五行护体诀；description=引五行余气护住周身。；weight=10；effects=1. type=learn_spell；spell_id=five_element_guard
+4. id=chest_flash；name=断脉闪；description=锋芒一线，直断灵脉。；weight=5；tags=金；effects=1. type=learn_spell；spell_id=meridian_severing_flash
+5. id=chest_bloom；name=生生化元；description=木气生发，伤势随之弥合。；weight=5；tags=木；effects=1. type=learn_spell；spell_id=life_bloom
+6. id=chest_stones；name=旧主灵石袋；description=袋中尚余45枚灵石。；weight=12；effects=1. type=add_spirit_stones；value=45
+7. id=chest_fire_qi；name=赤霞灵砂；description=灵枢 · 火 +15；weight=10；tags=火；effects=1. type=add_core_qi；qi=火；value=15
+8. id=chest_water_qi；name=寒潭髓露；description=灵枢 · 水 +15；weight=10；tags=水；effects=1. type=add_core_qi；qi=水；value=15
+9. id=chest_core；name=赤炎妖丹；description=获得赤炎妖丹1枚。；weight=12；tags=火；effects=1. type=add_item；item_id=red_flame_core；quantity=1
+10. id=chest_talisman；name=符箓小匣；description=获得水波符与回元符各1张。；weight=13；effects=1. type=add_item；item_id=water_talisman；quantity=1
+2. type=add_item；item_id=recovery_talisman；quantity=1",,,offer_count=3；affinity_bonus=3

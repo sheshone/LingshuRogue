@@ -1,0 +1,59 @@
+{
+  "cultivation_methods": [
+    {
+      "id": "metal_method",
+      "name": "锐金诀",
+      "description": "以金行灵气淬炼锋芒，追求凝练迅捷的攻势。",
+      "element_affinity": {"metal": 1.2},
+      "initial_spell_id": "metal_edge_art",
+      "replaces_spell_ids": ["qi_strike"],
+      "effects": [
+        {"type": "modifier", "target": "spell_tag:metal", "effect": "damage_up", "value": 10}
+      ]
+    },
+    {
+      "id": "wood_method",
+      "name": "青木诀",
+      "description": "以木行灵气温养生机，讲究生发与绵延。",
+      "element_affinity": {"wood": 1.2},
+      "initial_spell_id": "wood_thorn_art",
+      "replaces_spell_ids": ["qi_strike"],
+      "effects": [
+        {"type": "modifier", "target": "spell_tag:wood", "effect": "damage_up", "value": 10}
+      ]
+    },
+    {
+      "id": "water_method",
+      "name": "清水诀",
+      "description": "以水行灵气循环不息，重视灵气调度与绵长攻势。",
+      "element_affinity": {"water": 1.2},
+      "initial_spell_id": "water_arrow",
+      "replaces_spell_ids": ["qi_strike"],
+      "effects": [
+        {"type": "modifier", "target": "battle_rule:sea_retention", "effect": "retention_up", "value": 25}
+      ]
+    },
+    {
+      "id": "flame_method",
+      "name": "赤炎诀",
+      "description": "以火行灵气为根基，追求炽烈直接的攻势。",
+      "element_affinity": {"fire": 1.2},
+      "initial_spell_id": "fireball",
+      "replaces_spell_ids": ["qi_strike"],
+      "effects": [
+        {"type": "modifier", "target": "spell_tag:fire", "effect": "damage_up", "value": 10}
+      ]
+    },
+    {
+      "id": "earth_method",
+      "name": "厚土诀",
+      "description": "引土行灵气稳固周身，以守御等待反击。",
+      "element_affinity": {"earth": 1.2},
+      "initial_spell_id": "body_protection",
+      "replaces_spell_ids": ["qi_strike"],
+      "effects": [
+        {"type": "modifier", "target": "effect:shield", "effect": "shield_up", "value": 10}
+      ]
+    }
+  ]
+}

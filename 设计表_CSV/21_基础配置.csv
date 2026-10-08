@@ -1,0 +1,55 @@
+﻿配置类别,id/键,名称,主要字段,完整配置
+灵气类型,metal,金灵气,category=five_element；storable=是；color=#d9d2b6；description=五行基础灵气之一，肃锐凝练。,id=金；name=金灵气；category=five_element；storable=是；color=#d9d2b6；description=五行基础灵气之一，肃锐凝练。
+灵气类型,wood,木灵气,category=five_element；storable=是；color=#68b56b；description=五行基础灵气之一，生发绵延。,id=木；name=木灵气；category=five_element；storable=是；color=#68b56b；description=五行基础灵气之一，生发绵延。
+灵气类型,fire,火灵气,category=five_element；storable=是；color=#ef6c4d；description=五行基础灵气之一，炽烈升腾。,id=火；name=火灵气；category=five_element；storable=是；color=#ef6c4d；description=五行基础灵气之一，炽烈升腾。
+灵气类型,water,水灵气,category=five_element；storable=是；color=#4d9def；description=五行基础灵气之一，润下流转。,id=水；name=水灵气；category=five_element；storable=是；color=#4d9def；description=五行基础灵气之一，润下流转。
+灵气类型,earth,土灵气,category=five_element；storable=是；color=#b58a55；description=五行基础灵气之一，厚重承载。,id=土；name=土灵气；category=five_element；storable=是；color=#b58a55；description=五行基础灵气之一，厚重承载。
+灵枢模板,demo_five_elements_core,五行灵枢,description=五行气息均可纳入其中，实际储量决定丹田凝聚倾向。；storage=total_capacity=200；attribute_capacity=金=80；木=80；水=80；火=80；土=80；initial_qi=金=20；木=20；水=20；火=20；土=20；battle_projection=sea_capacity=12；mode=composition_weighted；amount_per_turn=10；guaranteed_primary_per_turn=2；retention=base_rate=0.0；maximum_rate=0.5；maximum_total=3；extensions=conversion_rules=；pollution_modifiers=,id=demo_five_elements_core；name=五行灵枢；description=五行气息均可纳入其中，实际储量决定丹田凝聚倾向。；storage=total_capacity=200；attribute_capacity=金=80；木=80；水=80；火=80；土=80；initial_qi=金=20；木=20；水=20；火=20；土=20；battle_projection=sea_capacity=12；mode=composition_weighted；amount_per_turn=10；guaranteed_primary_per_turn=2；retention=base_rate=0.0；maximum_rate=0.5；maximum_total=3；extensions=conversion_rules=；pollution_modifiers=
+玩家模板,demo_cultivator,无名修士,unit_type=修士；max_hp=50；attributes=tendencies=；skills=spell_ids=；ability_ids=；spiritual_sense=base_capacity=10；capacity_modifiers=；inventory=；runtime_slots=artifact_slots=0；companion_slots=0,id=demo_cultivator；name=无名修士；unit_type=修士；max_hp=50；attributes=tendencies=；skills=spell_ids=；ability_ids=；spiritual_sense=base_capacity=10；capacity_modifiers=；inventory=；runtime_slots=artifact_slots=0；companion_slots=0
+炼化配方,refine_red_flame_core,,consume=red_flame_core；quantity=1；effects=1. type=add_core_qi；qi=火；value=12,id=refine_red_flame_core；consume=red_flame_core；quantity=1；effects=1. type=add_core_qi；qi=火；value=12
+炼化配方,refine_steel_fang_core,,consume=steel_fang_core；quantity=1；effects=1. type=add_core_qi；qi=金；value=12,id=refine_steel_fang_core；consume=steel_fang_core；quantity=1；effects=1. type=add_core_qi；qi=金；value=12
+地图,qi_refining_region,青岚山境,realm_id=qi_refining；generation_mode=rolling_exploration；start_node_id=realm_origin；nodes=1. id=realm_origin；name=青岚山麓；type=start；description=薄雾沿山道流动，远处隐约可见数条岔路。；next_node_ids=,id=qi_refining_region；name=青岚山境；realm_id=qi_refining；generation_mode=rolling_exploration；start_node_id=realm_origin；nodes=1. id=realm_origin；name=青岚山麓；type=start；description=薄雾沿山道流动，远处隐约可见数条岔路。；next_node_ids=
+地图,initiation_grounds,问道山门,realm_id=qi_refining；generation_mode=choice_opening；start_node_id=initiation_origin；nodes=1. id=initiation_origin；name=照心崖；type=start；description=晨雾散开，三条山径各自传来不同的灵机。；next_node_ids=,id=initiation_grounds；name=问道山门；realm_id=qi_refining；generation_mode=choice_opening；start_node_id=initiation_origin；nodes=1. id=initiation_origin；name=照心崖；type=start；description=晨雾散开，三条山径各自传来不同的灵机。；next_node_ids=
+地图生成,initiation_choice_generation,,"id=initiation_choice_generation；map_id=initiation_grounds；mode=choice_opening；choice_count=3；choice_pool=1. name=断锋石径；type=battle；element=金；enemy_id=steel_fang_wolf；description=金铁交鸣声从乱石后传来。；battle_setup_id=initiation_metal
+2. name=青藤幽径；type=battle；element=木；enemy_id=withered_vine_spirit；description=藤影在雾中舒展，草木灵机悄然汇聚。；battle_setup_id=initiation_wood
+3. name=听泉古道；type=battle；element=水；enemy_id=bandit；description=水声时远时近，寒意沿石阶漫上。；battle_setup_id=initiation_water
+4. name=灼痕山坳；type=battle；element=火；enemy_id=ember_dust_moth；description=焦土尚有余温，赤光在风中明灭。；battle_setup_id=initiation_fire
+5. name=负岳岩门；type=battle；element=土；enemy_id=rock_shell_tortoise；description=厚重吐息震落石屑，山门前伏着庞大身影。；battle_setup_id=initiation_earth","id=initiation_choice_generation；map_id=initiation_grounds；mode=choice_opening；choice_count=3；choice_pool=1. name=断锋石径；type=battle；element=金；enemy_id=steel_fang_wolf；description=金铁交鸣声从乱石后传来。；battle_setup_id=initiation_metal
+2. name=青藤幽径；type=battle；element=木；enemy_id=withered_vine_spirit；description=藤影在雾中舒展，草木灵机悄然汇聚。；battle_setup_id=initiation_wood
+3. name=听泉古道；type=battle；element=水；enemy_id=bandit；description=水声时远时近，寒意沿石阶漫上。；battle_setup_id=initiation_water
+4. name=灼痕山坳；type=battle；element=火；enemy_id=ember_dust_moth；description=焦土尚有余温，赤光在风中明灭。；battle_setup_id=initiation_fire
+5. name=负岳岩门；type=battle；element=土；enemy_id=rock_shell_tortoise；description=厚重吐息震落石屑，山门前伏着庞大身影。；battle_setup_id=initiation_earth"
+地图生成,qi_refining_generation,,"id=qi_refining_generation；map_id=qi_refining_region；mode=rolling_exploration；reachable_count=3；future_count=9；connections_per_node=3；type_weights=battle=38；event=18；cultivation=16；rest=10；treasure=10；shop=7；boss=3；elite=0；elite_encounter=base_weight=2；weight_per_node=4；guaranteed_at=6；reset_on_victory=是；boss_encounter=minimum_depth=7；weight_per_depth=3；guaranteed_at_depth=12；maximum_per_layer=1；battle_pool=1. name=乱石兽径；description=碎石间留有新鲜足印，前方传来低沉喘息。；battle_setup_id=map_qi_normal；encounter_pool_id=qi_refining_normal；enemy_count=1
+2. name=荒寺残院；description=残破院墙后有灵力波动，似有敌影徘徊。；battle_setup_id=map_qi_normal；encounter_pool_id=qi_refining_normal；enemy_count=1
+3. name=黑石谷口；description=谷中回声凌乱，妖兽与散修都可能伏在岩影之后。；battle_setup_id=map_qi_normal；encounter_pool_id=qi_refining_normal；enemy_count=1
+4. name=荒林岔道；description=枯枝遮住天光，前方不时传来踩断落叶的声响。；battle_setup_id=map_qi_normal；encounter_pool_id=qi_refining_normal；enemy_count=1
+5. name=双影岔谷；description=两股气息一前一后封住山路，需同时判断双方意图。；battle_setup_id=map_qi_duo；encounter_pool_id=qi_refining_duo；enemy_count=2
+6. name=兽迹交错处；description=不同妖兽的足迹在此重叠，林间回应着两声低吼。；battle_setup_id=map_qi_duo；encounter_pool_id=qi_refining_duo；enemy_count=2；elite_pool=1. name=古木封径；description=铁皮木卫盘踞古道，周围草木皆被妖气压伏。；battle_setup_id=map_qi_elite；encounter_pool_id=qi_refining_elite；enemy_count=1；boss_pool=1. name=黑潮寨关；description=寨门之后潮声如雷，强敌镇守着炼气修士难得一见的机缘。；battle_setup_id=map_qi_boss；encounter_pool_id=qi_refining_boss；enemy_count=1；event_pool=1. name=溪边遗刻；description=溪水冲刷出一块刻有行气图的青石。；content_id=event_stream_inscription
+2. name=废弃药园；description=破败药圃仍被微弱阵光笼罩，灵草香气若隐若现。；content_id=event_abandoned_herb_garden
+3. name=山门旧道；description=断碑沿古道倾倒，一位前人的遗骨静坐碑下。；content_id=event_fallen_cultivator
+4. name=云泽灵泉；description=雾气从石隙涌出，泉中映着不断变换的五行微光。；content_id=event_cloud_spring；cultivation_pool=1. name=引气石台；description=山风穿过石台，五行灵气在此缓慢回旋。；content_id=cultivation_stone_platform；rest_pool=1. name=避风石窟；description=洞中干燥安静，可以暂时调息整备。；content_id=rest_wind_shelter；treasure_pool=1. name=封尘木匣；description=一只刻着禁制的木匣半埋在山石之间。；content_id=placeholder_sealed_chest；shop_pool=1. name=松烟行脚铺；description=游商以阵旗圈出一方安全地，符箓与残卷陈列在旧木案上。；content_id=wandering_qi_shop","id=qi_refining_generation；map_id=qi_refining_region；mode=rolling_exploration；reachable_count=3；future_count=9；connections_per_node=3；type_weights=battle=38；event=18；cultivation=16；rest=10；treasure=10；shop=7；boss=3；elite=0；elite_encounter=base_weight=2；weight_per_node=4；guaranteed_at=6；reset_on_victory=是；boss_encounter=minimum_depth=7；weight_per_depth=3；guaranteed_at_depth=12；maximum_per_layer=1；battle_pool=1. name=乱石兽径；description=碎石间留有新鲜足印，前方传来低沉喘息。；battle_setup_id=map_qi_normal；encounter_pool_id=qi_refining_normal；enemy_count=1
+2. name=荒寺残院；description=残破院墙后有灵力波动，似有敌影徘徊。；battle_setup_id=map_qi_normal；encounter_pool_id=qi_refining_normal；enemy_count=1
+3. name=黑石谷口；description=谷中回声凌乱，妖兽与散修都可能伏在岩影之后。；battle_setup_id=map_qi_normal；encounter_pool_id=qi_refining_normal；enemy_count=1
+4. name=荒林岔道；description=枯枝遮住天光，前方不时传来踩断落叶的声响。；battle_setup_id=map_qi_normal；encounter_pool_id=qi_refining_normal；enemy_count=1
+5. name=双影岔谷；description=两股气息一前一后封住山路，需同时判断双方意图。；battle_setup_id=map_qi_duo；encounter_pool_id=qi_refining_duo；enemy_count=2
+6. name=兽迹交错处；description=不同妖兽的足迹在此重叠，林间回应着两声低吼。；battle_setup_id=map_qi_duo；encounter_pool_id=qi_refining_duo；enemy_count=2；elite_pool=1. name=古木封径；description=铁皮木卫盘踞古道，周围草木皆被妖气压伏。；battle_setup_id=map_qi_elite；encounter_pool_id=qi_refining_elite；enemy_count=1；boss_pool=1. name=黑潮寨关；description=寨门之后潮声如雷，强敌镇守着炼气修士难得一见的机缘。；battle_setup_id=map_qi_boss；encounter_pool_id=qi_refining_boss；enemy_count=1；event_pool=1. name=溪边遗刻；description=溪水冲刷出一块刻有行气图的青石。；content_id=event_stream_inscription
+2. name=废弃药园；description=破败药圃仍被微弱阵光笼罩，灵草香气若隐若现。；content_id=event_abandoned_herb_garden
+3. name=山门旧道；description=断碑沿古道倾倒，一位前人的遗骨静坐碑下。；content_id=event_fallen_cultivator
+4. name=云泽灵泉；description=雾气从石隙涌出，泉中映着不断变换的五行微光。；content_id=event_cloud_spring；cultivation_pool=1. name=引气石台；description=山风穿过石台，五行灵气在此缓慢回旋。；content_id=cultivation_stone_platform；rest_pool=1. name=避风石窟；description=洞中干燥安静，可以暂时调息整备。；content_id=rest_wind_shelter；treasure_pool=1. name=封尘木匣；description=一只刻着禁制的木匣半埋在山石之间。；content_id=placeholder_sealed_chest；shop_pool=1. name=松烟行脚铺；description=游商以阵旗圈出一方安全地，符箓与残卷陈列在旧木案上。；content_id=wandering_qi_shop"
+突破规则,qi_to_foundation,,"id=qi_to_foundation；from_realm=qi_refining；to_realm=foundation_establishment；conditions=1. type=core_qi_total；label=灵枢总量；value=140
+2. type=method_affinity_qi；label=主修属性；minimum=45；minimum_ratio=0.3
+3. type=active_method；label=当前主功法；required=是
+4. type=learned_spell_count；label=已掌握神通；value=2","id=qi_to_foundation；from_realm=qi_refining；to_realm=foundation_establishment；conditions=1. type=core_qi_total；label=灵枢总量；value=140
+2. type=method_affinity_qi；label=主修属性；minimum=45；minimum_ratio=0.3
+3. type=active_method；label=当前主功法；required=是
+4. type=learned_spell_count；label=已掌握神通；value=2"
+属性规则,default_multiplier,默认倍率,1,1.0
+属性规则,relationships,五行关系,"1. attacker=金；defender=木；multiplier=1.5
+2. attacker=木；defender=土；multiplier=1.5
+3. attacker=土；defender=水；multiplier=1.5
+4. attacker=水；defender=火；multiplier=1.5
+5. attacker=火；defender=金；multiplier=1.5","1. attacker=金；defender=木；multiplier=1.5
+2. attacker=木；defender=土；multiplier=1.5
+3. attacker=土；defender=水；multiplier=1.5
+4. attacker=水；defender=火；multiplier=1.5
+5. attacker=火；defender=金；multiplier=1.5"

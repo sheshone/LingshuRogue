@@ -1,0 +1,26 @@
+{
+  "player_templates": [
+    {
+      "id": "demo_cultivator",
+      "name": "无名修士",
+      "unit_type": "cultivator",
+      "max_hp": 50,
+      "attributes": {
+        "tendencies": {}
+      },
+      "skills": {
+        "spell_ids": [],
+        "ability_ids": []
+      },
+      "spiritual_sense": {
+        "base_capacity": 10,
+        "capacity_modifiers": {}
+      },
+      "inventory": {},
+      "runtime_slots": {
+        "artifact_slots": 0,
+        "companion_slots": 0
+      }
+    }
+  ]
+}

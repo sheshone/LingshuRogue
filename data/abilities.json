@@ -1,0 +1,200 @@
+{
+  "abilities": [
+    {
+      "id": "puppet_strike",
+      "name": "木拳",
+      "description": "木制拳臂正面砸向目标。",
+      "effects": [
+        {"type": "damage", "value": 3, "target": "opponent"}
+      ]
+    },
+    {
+      "id": "bandit_slash",
+      "name": "劈砍",
+      "description": "挥动兵刃正面劈向目标。",
+      "effects": [
+        {"type": "damage", "value": 7, "target": "opponent"}
+      ]
+    },
+    {
+      "id": "bandit_guard",
+      "name": "护身术",
+      "description": "运转灵力护住周身。",
+      "effects": [
+        {"type": "shield", "value": 7, "target": "self"}
+      ]
+    },
+    {
+      "id": "steel_fang_bite",
+      "name": "钢牙撕咬",
+      "description": "金属般的利齿撕咬目标。",
+      "effects": [
+        {"type": "damage", "attribute": "metal", "value": 6, "target": "opponent"}
+      ]
+    },
+    {
+      "id": "fire_tail_sweep",
+      "name": "炎尾横扫",
+      "description": "燃烧的尾部横扫目标。",
+      "effects": [
+        {"type": "damage", "attribute": "fire", "value": 7, "target": "opponent"}
+      ]
+    },
+    {
+      "id": "tortoise_ram",
+      "name": "岩甲冲撞",
+      "description": "灵龟借沉重甲壳撞向目标。",
+      "effects": [
+        {"type": "damage", "attribute": "earth", "value": 6, "target": "opponent"}
+      ]
+    },
+    {
+      "id": "stone_shell_guard",
+      "name": "缩甲守御",
+      "description": "灵龟缩入岩甲，获得坚实护盾。",
+      "effects": [
+        {"type": "shield", "value": 7, "target": "self"}
+      ]
+    },
+    {
+      "id": "vine_lash",
+      "name": "藤鞭",
+      "description": "枯藤抽打目标，造成木属性伤害。",
+      "effects": [
+        {"type": "damage", "attribute": "wood", "value": 5, "target": "opponent"}
+      ]
+    },
+    {
+      "id": "life_siphon",
+      "name": "回春汲取",
+      "description": "牵引木行生机，治疗生命比例最低的友军。",
+      "effects": [
+        {"type": "heal", "value": 6, "target": "ally"}
+      ]
+    },
+    {
+      "id": "burning_dust",
+      "name": "灼粉",
+      "description": "洒落灼热鳞粉，造成较弱火属性伤害。",
+      "effects": [
+        {"type": "damage", "attribute": "fire", "value": 5, "target": "opponent"}
+      ]
+    },
+    {
+      "id": "rousing_wings",
+      "name": "扬尘振翅",
+      "description": "振翅扬起火尘，强化一名友军的下一次攻击。",
+      "effects": [
+        {"type": "buff", "status": "attack_up", "value": 30, "duration": 1, "target": "ally"}
+      ]
+    },
+    {
+      "id": "circling_charge",
+      "name": "盘旋蓄势",
+      "description": "在空中盘旋积蓄力量，准备下一次俯冲。",
+      "effects": [
+        {"type": "add_status", "status": "charged", "value": 1, "target": "self"}
+      ]
+    },
+    {
+      "id": "metal_dive",
+      "name": "金羽俯冲",
+      "description": "借蓄势从高处俯冲，发动危险的金属性攻击。",
+      "effects": [
+        {
+          "type": "damage", "attribute": "metal", "value": 10, "target": "opponent",
+          "condition": {"status": {"target": "self", "id": "charged", "min": 1}}
+        },
+        {
+          "type": "consume_status", "status": "charged", "value": 1, "target": "self",
+          "condition": {"status": {"target": "self", "id": "charged", "min": 1}}
+        }
+      ]
+    },
+    {
+      "id": "guardian_growth",
+      "name": "生木冲击",
+      "description": "催动木躯生长，攻击目标并恢复自身。",
+      "effects": [
+        {"type": "damage", "attribute": "wood", "value": 8, "target": "opponent"},
+        {"type": "heal", "value": 4, "target": "self"}
+      ]
+    },
+    {
+      "id": "guardian_iron_bark",
+      "name": "铁皮守御",
+      "description": "收拢铁皮覆盖木躯，获得护盾与短暂防御提升。",
+      "effects": [
+        {"type": "shield", "value": 8, "target": "self"},
+        {"type": "buff", "status": "defense_up", "value": 25, "duration": 1, "target": "self"}
+      ]
+    },
+    {
+      "id": "blood_vine_pierce",
+      "name": "血藤穿刺",
+      "description": "血色根藤贯向目标，并激发自身凶性。",
+      "effects": [
+        {"type": "damage", "attribute": "wood", "value": 8, "target": "opponent"},
+        {"type": "buff", "status": "attack_up", "value": 20, "duration": 1, "target": "self"}
+      ]
+    },
+    {
+      "id": "demonic_bloom",
+      "name": "妖根盛放",
+      "description": "妖根汲取积蓄的生机，恢复自身生命。",
+      "effects": [
+        {"type": "heal", "value": 8, "target": "self"}
+      ]
+    },
+    {
+      "id": "seal_guard",
+      "name": "镇石诀",
+      "description": "结印引动土行灵力，形成护盾。",
+      "effects": [
+        {"type": "shield", "value": 8, "target": "self"}
+      ]
+    },
+    {
+      "id": "measured_strike",
+      "name": "巡使剑诀",
+      "description": "以沉稳剑势攻击目标。",
+      "effects": [
+        {"type": "damage", "attribute": "metal", "value": 8, "target": "opponent"}
+      ]
+    },
+    {
+      "id": "black_water_blade",
+      "name": "黑水刃",
+      "description": "黑水灵力覆于短刃，斩向目标。",
+      "effects": [
+        {"type": "damage", "attribute": "water", "value": 10, "target": "opponent"}
+      ]
+    },
+    {
+      "id": "tide_guard",
+      "name": "黑潮护体",
+      "description": "黑潮环绕周身，形成护盾并提升下一次防御。",
+      "effects": [
+        {"type": "shield", "value": 10, "target": "self"},
+        {"type": "buff", "status": "defense_up", "value": 25, "duration": 1, "target": "self"}
+      ]
+    },
+    {
+      "id": "cold_edge_art",
+      "name": "寒锋决",
+      "description": "水金二气交汇于锋刃，发动危险斩击。",
+      "effects": [
+        {"type": "damage", "attribute": "water", "value": 13, "target": "opponent"}
+      ]
+    },
+    {
+      "id": "black_tide_recovery",
+      "name": "黑潮归元",
+      "description": "收束黑水灵力，恢复自身生命并强化下一次攻击。",
+      "effects": [
+        {"type": "heal", "value": 8, "target": "self"},
+        {"type": "buff", "status": "attack_up", "value": 25, "duration": 1, "target": "self"}
+      ]
+    }
+  ]
+}

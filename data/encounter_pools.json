@@ -1,0 +1,45 @@
+{
+  "encounter_pools": [
+    {
+      "id": "qi_refining_normal",
+      "type": "normal",
+      "enemy_count": 1,
+      "enemy_ids": [
+        "steel_fang_wolf",
+        "fire_tail_wolf",
+        "rock_shell_tortoise",
+        "withered_vine_spirit",
+        "ember_dust_moth",
+        "dusk_beak_crow"
+      ]
+    },
+    {
+      "id": "qi_refining_elite",
+      "type": "elite",
+      "enemy_count": 1,
+      "enemy_ids": [
+        "iron_bark_guardian",
+        "blood_root_demon",
+        "seal_bearing_enforcer"
+      ]
+    },
+    {
+      "id": "qi_refining_duo",
+      "type": "normal",
+      "enemy_count": 2,
+      "enemy_ids": [
+        "steel_fang_wolf",
+        "fire_tail_wolf",
+        "withered_vine_spirit",
+        "ember_dust_moth",
+        "dusk_beak_crow"
+      ]
+    },
+    {
+      "id": "qi_refining_boss",
+      "type": "boss",
+      "enemy_count": 1,
+      "enemy_ids": ["black_tide_chief"]
+    }
+  ]
+}

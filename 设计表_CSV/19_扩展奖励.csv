@@ -1,0 +1,11 @@
+﻿奖励表ID,对应敌人,级别,固定战利品,选择奖励,生成规则,状态
+mist_reed_crane_rewards,雾苇鹤,普通,灵石×12~18；mist_feather×1,神通三选一 + 灵气三选一,候选按五行权重生成，但至少保留1个跨流派选项。,设计候选
+stoneback_ape_rewards,负碑石猿,普通,灵石×12~18；stele_fragment×1,神通三选一 + 灵气三选一,候选按五行权重生成，但至少保留1个跨流派选项。,设计候选
+golden_thread_spider_rewards,金丝妖蛛,普通,灵石×12~18；golden_silk_gland×1,神通三选一 + 灵气三选一,候选按五行权重生成，但至少保留1个跨流派选项。,设计候选
+char_horn_boar_rewards,炭角火豕,普通,灵石×12~18；charcoal_core×1,神通三选一 + 灵气三选一,候选按五行权重生成，但至少保留1个跨流派选项。,设计候选
+wandering_herbalist_rewards,采药散修,普通,灵石×12~18；spring_powder×1,神通三选一 + 灵气三选一,候选按五行权重生成，但至少保留1个跨流派选项。,设计候选
+grave_moss_wraith_rewards,墓苔阴灵,普通,灵石×12~18；阴苔样本（待建物品）×1,神通三选一 + 灵气三选一,候选按五行权重生成，但至少保留1个跨流派选项。,设计候选
+hundred_blade_roamer_rewards,百刃散人,精英,灵石×35~50；armor_break_talisman×1,进阶神通三选一 + 法宝三选一,候选按五行权重生成，但至少保留1个跨流派选项。,设计候选
+marsh_brood_mother_rewards,泽母妖蟾,精英,灵石×35~50；marsh_poison_sac×1,进阶神通三选一 + 法宝三选一,候选按五行权重生成，但至少保留1个跨流派选项。,设计候选
+furnace_heart_golem_rewards,炉心石傀,精英,灵石×35~50；炉心碎片（待建物品）×1,进阶神通三选一 + 法宝三选一,候选按五行权重生成，但至少保留1个跨流派选项。,设计候选
+five_vein_alchemist_rewards,五脉丹师,Boss,灵石×90~120；five_vein_dregs×1,稀有神通三选一 + 稀有法宝三选一,候选按五行权重生成，但至少保留1个跨流派选项。,设计候选

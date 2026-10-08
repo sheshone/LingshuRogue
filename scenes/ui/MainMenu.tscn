@@ -1,0 +1,172 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/main_menu_ui.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/art/backgrounds/main_menu-celestial-ascent-v2.png" id="2_bg"]
+[ext_resource type="Theme" path="res://assets/ui/battle_theme.tres" id="3_theme"]
+[ext_resource type="Texture2D" path="res://assets/ui/generated/main_menu_title-lingshu-v1.png" id="4_title"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_theme")
+script = ExtResource("1_script")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="Shade" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.015, 0.03, 0.025, 0.08)
+mouse_filter = 2
+
+[node name="ArtTitle" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.57
+anchor_top = 0.08
+anchor_right = 0.97
+anchor_bottom = 0.31
+texture = ExtResource("4_title")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Motes" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchor_left = 0.53
+anchor_top = 0.13
+anchor_right = 0.94
+anchor_bottom = 0.27
+text = "灵　枢"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(0.94, 0.82, 0.5, 1)
+theme_override_font_sizes/font_size = 56
+
+[node name="Subtitle" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchor_left = 0.58
+anchor_top = 0.25
+anchor_right = 0.89
+anchor_bottom = 0.32
+text = "山海入道 · 五行修真"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.28, 0.25, 0.17, 0.9)
+theme_override_font_sizes/font_size = 18
+
+[node name="Menu" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.68
+anchor_top = 0.34
+anchor_right = 0.9
+anchor_bottom = 0.75
+theme_override_constants/separation = 12
+
+[node name="StartButton" type="Button" parent="Menu"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+text = "踏入仙途"
+theme_override_font_sizes/font_size = 21
+
+[node name="ContinueButton" type="Button" parent="Menu"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+text = "继续探索"
+
+[node name="HelpButton" type="Button" parent="Menu"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+text = "修行札记"
+
+[node name="SettingsButton" type="Button" parent="Menu"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+text = "设置"
+
+[node name="QuitButton" type="Button" parent="Menu"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+text = "暂别山门"
+
+[node name="Version" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchor_left = 0.78
+anchor_top = 0.92
+anchor_right = 0.97
+anchor_bottom = 0.97
+text = "炼气篇 · Vertical Slice"
+horizontal_alignment = 2
+theme_override_colors/font_color = Color(0.16, 0.16, 0.13, 0.75)
+
+[node name="HelpPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchor_left = 0.23
+anchor_top = 0.2
+anchor_right = 0.77
+anchor_bottom = 0.8
+theme_type_variation = &"ArtPanel"
+
+[node name="Content" type="VBoxContainer" parent="HelpPanel"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Heading" type="Label" parent="HelpPanel/Content"]
+layout_mode = 2
+text = "修行札记"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 28
+
+[node name="Body" type="Label" parent="HelpPanel/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "丹田储存当前战斗可用的灵气，灵枢决定它们凝聚的倾向。\n\n观察敌人意图，施展神通或保留灵气。战斗后选择奖励，沿山路继续探索。\n\n鼠标悬停神通、法宝和地图图标可以查看详细说明。\n\nF11：切换全屏。"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 18
+
+[node name="CloseHelpButton" type="Button" parent="HelpPanel/Content"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 44)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "合上札记"

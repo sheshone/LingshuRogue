@@ -1,0 +1,36 @@
+﻿id,名称,行动说明,效果摘要,原始效果字段
+puppet_strike,木拳,木制拳臂正面砸向目标。,1. 伤害 3 →敌方,1. type=damage；value=3；target=敌方
+bandit_slash,劈砍,挥动兵刃正面劈向目标。,1. 伤害 7 →敌方,1. type=damage；value=7；target=敌方
+bandit_guard,护身术,运转灵力护住周身。,1. 护盾 7 →自身,1. type=shield；value=7；target=自身
+steel_fang_bite,钢牙撕咬,金属般的利齿撕咬目标。,1. 伤害 金 6 →敌方,1. type=damage；attribute=金；value=6；target=敌方
+fire_tail_sweep,炎尾横扫,燃烧的尾部横扫目标。,1. 伤害 火 7 →敌方,1. type=damage；attribute=火；value=7；target=敌方
+tortoise_ram,岩甲冲撞,灵龟借沉重甲壳撞向目标。,1. 伤害 土 6 →敌方,1. type=damage；attribute=土；value=6；target=敌方
+stone_shell_guard,缩甲守御,灵龟缩入岩甲，获得坚实护盾。,1. 护盾 7 →自身,1. type=shield；value=7；target=自身
+vine_lash,藤鞭,枯藤抽打目标，造成木属性伤害。,1. 伤害 木 5 →敌方,1. type=damage；attribute=木；value=5；target=敌方
+life_siphon,回春汲取,牵引木行生机，治疗生命比例最低的友军。,1. 治疗 6 →友军,1. type=heal；value=6；target=友军
+burning_dust,灼粉,洒落灼热鳞粉，造成较弱火属性伤害。,1. 伤害 火 5 →敌方,1. type=damage；attribute=火；value=5；target=敌方
+rousing_wings,扬尘振翅,振翅扬起火尘，强化一名友军的下一次攻击。,1. 强化 attack_up 30 →友军 [duration=1],1. type=buff；status=attack_up；value=30；duration=1；target=友军
+circling_charge,盘旋蓄势,在空中盘旋积蓄力量，准备下一次俯冲。,1. 获得状态 charged 1 →自身,1. type=add_status；status=charged；value=1；target=自身
+metal_dive,金羽俯冲,借蓄势从高处俯冲，发动危险的金属性攻击。,"1. 伤害 金 10 →敌方 [condition=status=target=自身；id=charged；min=1]
+2. 消耗状态 charged 1 →自身 [condition=status=target=自身；id=charged；min=1]","1. type=damage；attribute=金；value=10；target=敌方；condition=status=target=自身；id=charged；min=1
+2. type=consume_status；status=charged；value=1；target=自身；condition=status=target=自身；id=charged；min=1"
+guardian_growth,生木冲击,催动木躯生长，攻击目标并恢复自身。,"1. 伤害 木 8 →敌方
+2. 治疗 4 →自身","1. type=damage；attribute=木；value=8；target=敌方
+2. type=heal；value=4；target=自身"
+guardian_iron_bark,铁皮守御,收拢铁皮覆盖木躯，获得护盾与短暂防御提升。,"1. 护盾 8 →自身
+2. 强化 defense_up 25 →自身 [duration=1]","1. type=shield；value=8；target=自身
+2. type=buff；status=defense_up；value=25；duration=1；target=自身"
+blood_vine_pierce,血藤穿刺,血色根藤贯向目标，并激发自身凶性。,"1. 伤害 木 8 →敌方
+2. 强化 attack_up 20 →自身 [duration=1]","1. type=damage；attribute=木；value=8；target=敌方
+2. type=buff；status=attack_up；value=20；duration=1；target=自身"
+demonic_bloom,妖根盛放,妖根汲取积蓄的生机，恢复自身生命。,1. 治疗 8 →自身,1. type=heal；value=8；target=自身
+seal_guard,镇石诀,结印引动土行灵力，形成护盾。,1. 护盾 8 →自身,1. type=shield；value=8；target=自身
+measured_strike,巡使剑诀,以沉稳剑势攻击目标。,1. 伤害 金 8 →敌方,1. type=damage；attribute=金；value=8；target=敌方
+black_water_blade,黑水刃,黑水灵力覆于短刃，斩向目标。,1. 伤害 水 10 →敌方,1. type=damage；attribute=水；value=10；target=敌方
+tide_guard,黑潮护体,黑潮环绕周身，形成护盾并提升下一次防御。,"1. 护盾 10 →自身
+2. 强化 defense_up 25 →自身 [duration=1]","1. type=shield；value=10；target=自身
+2. type=buff；status=defense_up；value=25；duration=1；target=自身"
+cold_edge_art,寒锋决,水金二气交汇于锋刃，发动危险斩击。,1. 伤害 水 13 →敌方,1. type=damage；attribute=水；value=13；target=敌方
+black_tide_recovery,黑潮归元,收束黑水灵力，恢复自身生命并强化下一次攻击。,"1. 治疗 8 →自身
+2. 强化 attack_up 25 →自身 [duration=1]","1. type=heal；value=8；target=自身
+2. type=buff；status=attack_up；value=25；duration=1；target=自身"

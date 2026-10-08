@@ -1,0 +1,100 @@
+{
+  "battle_setups": [
+    {"id":"initiation_metal","title":"断锋试炼","player_template_id":"demo_cultivator","spirit_core_id":"demo_five_elements_core","enemy_ids":["steel_fang_wolf"],"enemy_hp_multiplier":0.42,"attributes_enabled":true,"reward_table_ids":["initiation_metal_reward"],"map_after_victory_id":"qi_refining_region","map_start_node_id":"realm_origin"},
+    {"id":"initiation_wood","title":"青藤试炼","player_template_id":"demo_cultivator","spirit_core_id":"demo_five_elements_core","enemy_ids":["withered_vine_spirit"],"enemy_hp_multiplier":0.36,"attributes_enabled":true,"reward_table_ids":["initiation_wood_reward"],"map_after_victory_id":"qi_refining_region","map_start_node_id":"realm_origin"},
+    {"id":"initiation_water","title":"听泉试炼","player_template_id":"demo_cultivator","spirit_core_id":"demo_five_elements_core","enemy_ids":["bandit"],"enemy_hp_multiplier":0.25,"attributes_enabled":true,"reward_table_ids":["initiation_water_reward"],"map_after_victory_id":"qi_refining_region","map_start_node_id":"realm_origin"},
+    {"id":"initiation_fire","title":"灼痕试炼","player_template_id":"demo_cultivator","spirit_core_id":"demo_five_elements_core","enemy_ids":["ember_dust_moth"],"enemy_hp_multiplier":0.45,"attributes_enabled":true,"reward_table_ids":["initiation_fire_reward"],"map_after_victory_id":"qi_refining_region","map_start_node_id":"realm_origin"},
+    {"id":"initiation_earth","title":"负岳试炼","player_template_id":"demo_cultivator","spirit_core_id":"demo_five_elements_core","enemy_ids":["rock_shell_tortoise"],"enemy_hp_multiplier":0.3,"attributes_enabled":true,"reward_table_ids":["initiation_earth_reward"],"map_after_victory_id":"qi_refining_region","map_start_node_id":"realm_origin"},
+    {
+      "id": "battle_1_training_puppet",
+      "title": "试炼木傀",
+      "player_template_id": "demo_cultivator",
+      "spirit_core_id": "demo_five_elements_core",
+      "enemy_ids": ["training_puppet"],
+      "attributes_enabled": false,
+      "next_battle_id": "battle_2_bandit",
+      "map_after_victory_id": "qi_refining_region",
+      "map_start_node_id": "realm_origin",
+      "runtime_seed": {
+        "learned_spell_ids": ["qi_strike"],
+        "inventory": {},
+        "materials": {},
+        "learned_method_ids": [],
+        "active_method_id": "",
+        "relics": [],
+        "artifacts": [],
+        "companions": [],
+        "statuses": []
+      }
+    },
+    {
+      "id": "battle_2_bandit",
+      "title": "遭遇强盗",
+      "player_template_id": "demo_cultivator",
+      "spirit_core_id": "demo_five_elements_core",
+      "enemy_ids": ["bandit"],
+      "attributes_enabled": false,
+      "next_battle_id": "battle_3_twin_wolves"
+    },
+    {
+      "id": "battle_3_twin_wolves",
+      "title": "双狼夹击",
+      "player_template_id": "demo_cultivator",
+      "spirit_core_id": "demo_five_elements_core",
+      "enemy_ids": ["steel_fang_wolf", "fire_tail_wolf"],
+      "attributes_enabled": true,
+      "next_battle_id": ""
+    },
+    {
+      "id": "map_qi_normal",
+      "title": "山野遭遇",
+      "player_template_id": "demo_cultivator",
+      "spirit_core_id": "demo_five_elements_core",
+      "encounter_pool_id": "qi_refining_normal",
+      "enemy_count": 1,
+      "attributes_enabled": true,
+      "next_battle_id": ""
+    },
+    {
+      "id": "map_qi_elite",
+      "title": "古道强敌",
+      "player_template_id": "demo_cultivator",
+      "spirit_core_id": "demo_five_elements_core",
+      "encounter_pool_id": "qi_refining_elite",
+      "enemy_count": 1,
+      "attributes_enabled": true,
+      "next_battle_id": ""
+    },
+    {
+      "id": "map_qi_duo",
+      "title": "山野夹击",
+      "player_template_id": "demo_cultivator",
+      "spirit_core_id": "demo_five_elements_core",
+      "encounter_pool_id": "qi_refining_duo",
+      "enemy_count": 2,
+      "enemy_hp_multiplier": 0.82,
+      "attributes_enabled": true,
+      "reward_table_ids": ["qi_refining_normal_rewards"],
+      "next_battle_id": ""
+    },
+    {
+      "id": "map_qi_elite_demo",
+      "title": "铁皮木卫",
+      "player_template_id": "demo_cultivator",
+      "spirit_core_id": "demo_five_elements_core",
+      "enemy_ids": ["iron_bark_guardian"],
+      "attributes_enabled": true,
+      "next_battle_id": ""
+    },
+    {
+      "id": "map_qi_boss",
+      "title": "黑潮寨主",
+      "player_template_id": "demo_cultivator",
+      "spirit_core_id": "demo_five_elements_core",
+      "encounter_pool_id": "qi_refining_boss",
+      "enemy_count": 1,
+      "attributes_enabled": true,
+      "next_battle_id": ""
+    }
+  ]
+}

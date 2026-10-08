@@ -1,0 +1,6 @@
+﻿id,名称,类型,标签,描述,战斗使用效果,未来处理接口
+water_talisman,水波符,consumable,,水灵力汇聚成波纹，向目标冲击。,1. 伤害 水 12 →敌方,
+steel_fang_core,钢齿妖丹,material,core、金、demon,残留着金行妖力的妖丹。,,
+recovery_talisman,回元符,consumable,,符中灵力回流周身，恢复使用者生命。,1. 治疗 10 →自身,
+vitality_pill,养元丹,consumable,,炼气修士常备的疗伤丹药，药力温和持久。,1. 治疗 18 →自身,
+red_flame_core,赤炎妖丹,material,core、火、demon,蕴含火属性妖力的妖丹。,,

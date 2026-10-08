@@ -1,0 +1,20 @@
+{
+  "breakthrough_rules": [
+    {
+      "id": "qi_to_foundation",
+      "from_realm": "qi_refining",
+      "to_realm": "foundation_establishment",
+      "conditions": [
+        {"type": "core_qi_total", "label": "灵枢总量", "value": 140},
+        {
+          "type": "method_affinity_qi",
+          "label": "主修属性",
+          "minimum": 45,
+          "minimum_ratio": 0.3
+        },
+        {"type": "active_method", "label": "当前主功法", "required": true},
+        {"type": "learned_spell_count", "label": "已掌握神通", "value": 2}
+      ]
+    }
+  ]
+}

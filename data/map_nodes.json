@@ -1,0 +1,36 @@
+{
+  "maps": [
+    {
+      "id": "qi_refining_region",
+      "name": "青岚山境",
+      "realm_id": "qi_refining",
+      "generation_mode": "rolling_exploration",
+      "start_node_id": "realm_origin",
+      "nodes": [
+        {
+          "id": "realm_origin",
+          "name": "青岚山麓",
+          "type": "start",
+          "description": "薄雾沿山道流动，远处隐约可见数条岔路。",
+          "next_node_ids": []
+        }
+      ]
+    },
+    {
+      "id": "initiation_grounds",
+      "name": "问道山门",
+      "realm_id": "qi_refining",
+      "generation_mode": "choice_opening",
+      "start_node_id": "initiation_origin",
+      "nodes": [
+        {
+          "id": "initiation_origin",
+          "name": "照心崖",
+          "type": "start",
+          "description": "晨雾散开，三条山径各自传来不同的灵机。",
+          "next_node_ids": []
+        }
+      ]
+    }
+  ]
+}

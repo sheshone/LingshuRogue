@@ -1,0 +1,146 @@
+{
+  "relics": [
+    {
+      "id": "sword_nurturing_gourd",
+      "icon": "sword_nurturing_gourd",
+      "name": "养剑葫",
+      "description": "每场战斗开始时获得1层锋锐。",
+      "tags": ["metal", "sharpness"],
+      "effects": [{"type":"trigger_effect","trigger":"battle_start","effect":{"type":"add_status","status":"sharpness","value":1,"target":"self"}}]
+    },
+    {
+      "id": "verdant_spirit_cauldron",
+      "icon": "♨",
+      "name": "青木小鼎",
+      "description": "每回合开始时获得1层生机。",
+      "tags": ["wood", "vitality"],
+      "effects": [{"type":"trigger_effect","trigger":"turn_start","effect":{"type":"add_status","status":"vitality","value":1,"target":"self"}}]
+    },
+    {
+      "id": "spirit_focus_seal",
+      "icon": "印",
+      "name": "定神印",
+      "description": "神识容量提高2。",
+      "tags": ["sense", "build"],
+      "effects": [{"type":"modifier","target":"player_rule:spiritual_sense_capacity","effect":"capacity_up","value":2}]
+    },
+    {
+      "id": "golden_edge_whetstone",
+      "icon": "◇",
+      "name": "砺金石",
+      "description": "所有带金行标签的神通基础伤害提高20%。",
+      "tags": ["metal", "attack"],
+      "effects": [{"type":"modifier","target":"spell_tag:metal","effect":"damage_up","value":20}]
+    },
+    {
+      "id": "earth_anchor_seal",
+      "icon": "山",
+      "name": "镇岳印",
+      "description": "回合结束时保留75%护盾。",
+      "tags": ["earth", "shield"],
+      "effects": [{"type":"modifier","target":"battle_rule:shield_retention","effect":"retention_set","value":75}]
+    },
+    {
+      "id": "tidal_droplet",
+      "icon": "滴",
+      "name": "潮生滴",
+      "description": "每回合开始时额外凝聚1点水灵气。",
+      "tags": ["water", "resource"],
+      "effects": [{"type":"trigger_effect","trigger":"turn_start","effect":{"type":"add_sea_qi","qi":"water","value":1,"target":"self"}}]
+    },
+    {
+      "id": "five_element_compass",
+      "icon": "five_element_compass",
+      "name": "五行罗盘",
+      "description": "丹田灵气的回合保留比例提高10%。",
+      "tags": ["universal", "retain_qi"],
+      "effects": [{"type": "modifier", "target": "battle_rule:sea_retention", "effect": "retention_up", "value": 10}]
+    },
+    {
+      "id": "vein_stabilizing_stone",
+      "icon": "石",
+      "name": "镇脉石",
+      "description": "每场战斗开始时获得4点护盾。",
+      "tags": ["universal", "shield"],
+      "effects": [{"type": "trigger_effect", "trigger": "battle_start", "effect": {"type": "shield", "value": 4, "target": "self"}}]
+    },
+    {
+      "id": "green_sprout_pendant",
+      "icon": "芽",
+      "name": "青芽坠",
+      "description": "每场战斗开始时恢复3点生命。",
+      "tags": ["wood", "heal"],
+      "effects": [{"type": "trigger_effect", "trigger": "battle_start", "effect": {"type": "heal", "value": 3, "target": "self"}}]
+    },
+    {
+      "id": "scarlet_flame_pearl",
+      "icon": "珠",
+      "name": "赤炎珠",
+      "description": "每场战斗开始时获得1层火种。",
+      "tags": ["fire", "flame_seed"],
+      "effects": [
+        {"type": "trigger_effect", "trigger": "battle_start", "effect": {"type": "add_status", "status": "flame_seed", "value": 1, "target": "self"}}
+      ]
+    },
+    {
+      "id": "black_tortoise_armor",
+      "icon": "甲",
+      "name": "玄武甲",
+      "description": "回合结束时保留50%护盾。",
+      "tags": ["earth", "shield"],
+      "effects": [
+        {"type": "modifier", "target": "battle_rule:shield_retention", "effect": "retention_set", "value": 50}
+      ]
+    },
+    {
+      "id": "mystic_water_bottle",
+      "icon": "壶",
+      "name": "玄水瓶",
+      "description": "丹田灵气的回合保留比例提高25%。",
+      "tags": ["water", "retain_qi"],
+      "effects": [
+        {"type": "modifier", "target": "battle_rule:sea_retention", "effect": "retention_up", "value": 25}
+      ]
+    },
+    {
+      "id": "echoing_dharma_mirror",
+      "icon": "mirror",
+      "name": "复法镜",
+      "description": "每回合施展的第一个神通，其伤害、护盾与治疗效果会以一半威力再发生一次。",
+      "tags": ["rule", "repeat"],
+      "effects": [
+        {"type":"modifier","target":"battle_rule:first_spell","effect":"repeat_percent","value":50}
+      ]
+    },
+    {
+      "id": "hollow_valley_cup",
+      "icon": "cup",
+      "name": "空谷盏",
+      "description": "每回合第一次将丹田灵气恰好用尽时，获得5点护盾。",
+      "tags": ["rule", "empty_qi"],
+      "effects": [
+        {"type":"modifier","target":"battle_rule:empty_sea","effect":"shield_once_per_turn","value":5}
+      ]
+    },
+    {
+      "id": "returning_light_lamp",
+      "icon": "lamp",
+      "name": "回光灯",
+      "description": "每场战斗第一次受到致命伤害时，保留1点生命并获得6点护盾。",
+      "tags": ["rule", "survival"],
+      "effects": [
+        {"type":"modifier","target":"battle_rule:lethal_damage","effect":"survive_once","value":6}
+      ]
+    },
+    {
+      "id": "karma_balance",
+      "icon": "balance",
+      "name": "因果衡",
+      "description": "施展神通时，若其中含有伤害效果，同时获得其基础伤害总值25%的护盾。",
+      "tags": ["rule", "conversion"],
+      "effects": [
+        {"type":"modifier","target":"spell_rule:any","effect":"damage_to_shield_percent","value":25}
+      ]
+    }
+  ]
+}

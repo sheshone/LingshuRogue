@@ -1,0 +1,41 @@
+{
+  "spirit_cores": [
+    {
+      "id": "demo_five_elements_core",
+      "name": "五行灵枢",
+      "description": "五行气息均可纳入其中，实际储量决定丹田凝聚倾向。",
+      "storage": {
+        "total_capacity": 200,
+        "attribute_capacity": {
+          "metal": 80,
+          "wood": 80,
+          "water": 80,
+          "fire": 80,
+          "earth": 80
+        },
+        "initial_qi": {
+          "metal": 20,
+          "wood": 20,
+          "water": 20,
+          "fire": 20,
+          "earth": 20
+        }
+      },
+      "battle_projection": {
+        "sea_capacity": 12,
+        "mode": "composition_weighted",
+        "amount_per_turn": 10,
+        "guaranteed_primary_per_turn": 2,
+        "retention": {
+          "base_rate": 0.0,
+          "maximum_rate": 0.5,
+          "maximum_total": 3
+        }
+      },
+      "extensions": {
+        "conversion_rules": [],
+        "pollution_modifiers": {}
+      }
+    }
+  ]
+}

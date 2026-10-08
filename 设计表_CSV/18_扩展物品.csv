@@ -1,0 +1,9 @@
+﻿id,名称,类型,效果/描述,来源,配套敌人ID,状态
+spring_powder,回春散,消耗品,恢复10点生命。,采药散修储物袋/普通掉落,wandering_herbalist,设计候选
+armor_break_talisman,破甲符,符箓,造成8点金伤害，并削去6点护盾。,百刃散人储物袋/商店,hundred_blade_roamer,设计候选
+mist_feather,凝雾羽,材料,沾有水行雾气的长羽。,雾苇鹤掉落,mist_reed_crane,设计候选
+stele_fragment,负碑残片,材料,刻有残缺镇山纹的石片。,负碑石猿掉落,stoneback_ape,设计候选
+golden_silk_gland,金丝囊,材料,能够抽出细韧金丝的妖囊。,金丝妖蛛掉落,golden_thread_spider,设计候选
+charcoal_core,炭心妖丹,材料,内蕴躁动火气的妖丹。,炭角火豕掉落,char_horn_boar,设计候选
+marsh_poison_sac,泽毒囊,材料,水气与微毒纠缠的妖囊。,泽母妖蟾掉落,marsh_brood_mother,设计候选
+five_vein_dregs,五脉丹渣,稀有材料,五行药性互相冲突的丹炉残渣。,五脉丹师掉落,five_vein_alchemist,设计候选

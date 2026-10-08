@@ -1,0 +1,16 @@
+﻿现有资源设计总表,,,
+数据来自 data/*.json；中文列用于策划阅读，ID 与引用列用于回写数据时核对。,,,
+,,,
+资源类别,当前数量,来源文件,策划用途
+敌人,12,enemies.json,配置单位、行动来源与奖励引用
+行动能力,23,abilities.json,敌人与通用行为效果
+神通,27,spells.json,玩家构筑卡池
+功法,5,cultivation_methods.json,初始路线与规则修正
+法宝,16,relics.json,长期被动规则组件
+物品,5,items.json,消耗品与材料
+状态,8,statuses.json,战斗状态定义
+战斗配置,13,battle_setups.json,具体战斗编队
+遭遇池,4,encounter_pools.json,随机遭遇来源
+奖励表,15,reward_tables.json,战斗与节点奖励
+节点内容,9,map_node_contents.json,事件、修炼、休息等内容
+节点候选,2,node_offer_tables.json,节点内随机候选池

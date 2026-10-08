@@ -1,0 +1,64 @@
+﻿id,模式,固定奖励,神通候选,灵气候选,法宝候选,其他奖励字段
+initiation_metal_reward,,,,,,choice_groups=1. id=receive_metal_method；title=石台上的锐金残卷；choose=1；skippable=否；options=1. type=learn_method；method_id=metal_method；set_active=是
+initiation_wood_reward,,,,,,choice_groups=1. id=receive_wood_method；title=藤心中的青木残卷；choose=1；skippable=否；options=1. type=learn_method；method_id=wood_method；set_active=是
+initiation_water_reward,,,,,,choice_groups=1. id=receive_water_method；title=泉眼中的清水残卷；choose=1；skippable=否；options=1. type=learn_method；method_id=water_method；set_active=是
+initiation_fire_reward,,,,,,choice_groups=1. id=receive_fire_method；title=余烬中的赤炎残卷；choose=1；skippable=否；options=1. type=learn_method；method_id=flame_method；set_active=是
+initiation_earth_reward,,,,,,choice_groups=1. id=receive_earth_method；title=岩门中的厚土残卷；choose=1；skippable=否；options=1. type=learn_method；method_id=earth_method；set_active=是
+training_puppet_rewards,,,,,,"choice_groups=1. id=intro_method_choice；title=择定入门功法；choose=1；skippable=否；options=1. type=learn_method；method_id=metal_method；set_active=是
+2. type=learn_method；method_id=wood_method；set_active=是
+3. type=learn_method；method_id=water_method；set_active=是
+4. type=learn_method；method_id=flame_method；set_active=是
+5. type=learn_method；method_id=earth_method；set_active=是"
+bandit_rewards,,1. type=consumable；item_id=water_talisman；quantity=1,,,,include_table_ids=qi_refining_normal_rewards；choice_groups=
+steel_fang_wolf_rewards,,1. type=material；item_id=steel_fang_core；quantity=1,,,,include_table_ids=qi_refining_normal_rewards；choice_groups=
+fire_tail_wolf_rewards,,1. type=material；item_id=red_flame_core；quantity=1,,,,include_table_ids=qi_refining_normal_rewards；choice_groups=
+qi_refining_no_reward,,,,,,include_table_ids=qi_refining_normal_rewards；choice_groups=
+qi_refining_normal_rewards,,1. type=spirit_stones；value=12,,,,"choice_groups=1. id=qi_refining_spell_choice；title=参悟一门神通；choose=1；candidate_count=3；randomize=是；skippable=是；options=1. type=learn_spell；spell_id=honing_breath；requirements=not_learned=是
+2. type=learn_spell；spell_id=meridian_severing_flash；weight=1；requirements=not_learned=是
+3. type=learn_spell；spell_id=golden_arc；requirements=not_learned=是
+4. type=learn_spell；spell_id=metallic_guard；requirements=not_learned=是
+5. type=learn_spell；spell_id=sprouting_guard；requirements=not_learned=是
+6. type=learn_spell；spell_id=life_bloom；weight=1；requirements=not_learned=是
+7. type=learn_spell；spell_id=verdant_recovery；requirements=not_learned=是
+8. type=learn_spell；spell_id=wooden_aegis；requirements=not_learned=是
+9. type=learn_spell；spell_id=water_cycle；requirements=not_learned=是
+10. type=learn_spell；spell_id=five_phase_exchange；requirements=not_learned=是
+11. type=learn_spell；spell_id=returning_flow；requirements=not_learned=是
+12. type=learn_spell；spell_id=tidal_art；weight=1；requirements=not_learned=是
+13. type=learn_spell；spell_id=ember_guard；requirements=not_learned=是
+14. type=learn_spell；spell_id=kindling_art；requirements=not_learned=是
+15. type=learn_spell；spell_id=wildfire_wave；weight=1；requirements=not_learned=是
+16. type=learn_spell；spell_id=flame_burst；weight=1；requirements=not_learned=是
+17. type=learn_spell；spell_id=mountain_guard；requirements=not_learned=是
+18. type=learn_spell；spell_id=terrain_art；requirements=not_learned=是
+19. type=learn_spell；spell_id=rock_reversal；weight=1；requirements=not_learned=是
+20. type=learn_spell；spell_id=mountain_collapse；weight=1；requirements=not_learned=是
+21. type=learn_spell；spell_id=five_element_guard；requirements=not_learned=是
+2. id=qi_refining_qi_choice；title=引一缕灵气入灵枢；choose=1；candidate_count=3；randomize=是；skippable=是；options=1. type=add_core_qi；qi=金；value=6
+2. type=add_core_qi；qi=木；value=6
+3. type=add_core_qi；qi=水；value=6
+4. type=add_core_qi；qi=火；value=6
+5. type=add_core_qi；qi=土；value=6"
+qi_refining_elite_demo_rewards,,"1. type=spirit_stones；value=28
+2. type=consumable；item_id=recovery_talisman；quantity=1",,,,include_table_ids=qi_refining_normal_rewards、qi_refining_elite_advanced_rewards；choice_groups=
+qi_refining_elite_advanced_rewards,,,,,,"choice_groups=1. id=qi_refining_elite_advanced_choice；title=夺取精英机缘；choose=1；candidate_count=3；randomize=是；skippable=是；options=1. type=relic；relic_id=scarlet_flame_pearl；requirements=not_owned=是
+2. type=relic；relic_id=black_tortoise_armor；requirements=not_owned=是
+3. type=relic；relic_id=mystic_water_bottle；requirements=not_owned=是
+4. type=relic；relic_id=five_element_compass；requirements=not_owned=是
+5. type=relic；relic_id=sword_nurturing_gourd；requirements=not_owned=是
+6. type=relic；relic_id=verdant_spirit_cauldron；requirements=not_owned=是
+7. type=relic；relic_id=echoing_dharma_mirror；requirements=not_owned=是
+8. type=relic；relic_id=hollow_valley_cup；requirements=not_owned=是
+9. type=relic；relic_id=karma_balance；requirements=not_owned=是"
+qi_refining_boss_rewards,,1. type=spirit_stones；value=70,,,,include_table_ids=qi_refining_normal_rewards、qi_refining_boss_rare_rewards；choice_groups=
+qi_refining_boss_rare_rewards,,,,,,"choice_groups=1. id=qi_refining_boss_rare_choice；title=黑潮寨秘藏；choose=1；candidate_count=3；randomize=是；skippable=是；options=1. type=relic；relic_id=vein_stabilizing_stone；requirements=not_owned=是
+2. type=relic；relic_id=green_sprout_pendant；requirements=not_owned=是
+3. type=relic；relic_id=spirit_focus_seal；requirements=not_owned=是
+4. type=relic；relic_id=returning_light_lamp；requirements=not_owned=是
+5. type=relic；relic_id=echoing_dharma_mirror；requirements=not_owned=是
+6. type=relic；relic_id=karma_balance；requirements=not_owned=是
+7. type=learn_spell；spell_id=meridian_severing_flash；requirements=not_learned=是
+8. type=learn_spell；spell_id=life_bloom；requirements=not_learned=是
+9. type=learn_spell；spell_id=flame_burst；requirements=not_learned=是
+10. type=learn_spell；spell_id=rock_reversal；requirements=not_learned=是
+11. type=learn_spell；spell_id=tidal_art；requirements=not_learned=是"

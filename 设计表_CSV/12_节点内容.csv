@@ -1,0 +1,37 @@
+﻿id,名称,节点类型,描述,选项/结果,战斗/奖励引用,其他字段
+event_stream_inscription,,event,青石上的行气图仍残留微弱水灵气，只来得及选择一种处理方式。,"1. id=absorb_water；name=顺水参悟；description=灵枢 · 水 +10；effects=1. type=add_core_qi；qi=水；value=10
+2. id=take_talisman；name=拓印符纹；description=获得水波符1张。；effects=1. type=add_item；item_id=water_talisman；quantity=1",,title=溪边遗刻
+event_abandoned_herb_garden,,event,残阵中还护着几株灵草，土下又露出旧修士遗落的钱囊。,"1. id=gather_herbs；name=采下灵草；description=获得养元丹1枚。；effects=1. type=add_item；item_id=vitality_pill；quantity=1
+2. id=draw_wood_qi；name=引纳木气；description=灵枢 · 木 +10；effects=1. type=add_core_qi；qi=木；value=10
+3. id=take_stones；name=拾取钱囊；description=获得20枚灵石。；effects=1. type=add_spirit_stones；value=20",,title=废弃药园
+event_fallen_cultivator,,event,一具坐化修士的遗骨倚在碑下，掌中符纸与石缝灵光只能择一取走。,"1. id=take_talisman；name=收起符箓；description=获得水波符与回元符各1张。；effects=1. type=add_item；item_id=water_talisman；quantity=1
+2. type=add_item；item_id=recovery_talisman；quantity=1
+2. id=meditate_by_stele；name=碑前静修；description=灵枢 · 土 +10；effects=1. type=add_core_qi；qi=土；value=10
+3. id=leave_incense；name=留香祭拜；description=不取遗物，安定心神并恢复生命。；effects=1. type=heal_player_full",,title=山门旧道
+event_cloud_spring,,event,泉眼吞吐水雾，五行气机随涟漪交替显现。,"1. id=drink_spring；name=饮泉调息；description=恢复全部生命。；effects=1. type=heal_player_full
+2. id=take_water；name=截取水脉；description=灵枢 · 水 +10；effects=1. type=add_core_qi；qi=水；value=10
+3. id=wash_fire_to_water；name=洗炼火气；description=将8点火灵气转为水灵气。；effects=1. type=convert_core_qi；from_qi=火；to_qi=水；value=8",,title=云泽灵泉
+cultivation_stone_platform,,cultivation,石台五脉俱明，只可择一引气入枢。,"1. id=focused_metal；name=磨砺锐金；description=循金石锋鸣吐纳。灵枢 · 金 +15；effects=1. type=add_core_qi；qi=金；value=15
+2. id=focused_wood；name=温养青木；description=借草木生机温养经脉。灵枢 · 木 +15；effects=1. type=add_core_qi；qi=木；value=15
+3. id=expand_fire；name=淬炼赤火；description=循赤焰余温吐纳。灵枢 · 火 +15；effects=1. type=add_core_qi；qi=火；value=15
+4. id=expand_water；name=听泉引水；description=随清泉流转行气。灵枢 · 水 +15；effects=1. type=add_core_qi；qi=水；value=15
+5. id=focused_earth；name=沉息纳土；description=沉心静坐，感应地脉。灵枢 · 土 +15；effects=1. type=add_core_qi；qi=土；value=15",,title=引气石台
+rest_wind_shelter,,rest,在安全处选择一项整理。,"1. id=recover；name=调息恢复；description=恢复全部生命。；effects=1. type=heal_player_full
+2. id=balance_qi；name=梳理灵枢；description=将5点金灵气转换为当前稀少的水灵气。；effects=1. type=convert_core_qi；from_qi=金；to_qi=水；value=5
+3. id=refine_flame_core；name=炼化赤炎妖丹；description=消耗赤炎妖丹。灵枢 · 火 +12；effects=1. type=process_recipe；recipe_id=refine_red_flame_core
+4. id=refine_metal_core；name=炼化钢齿妖丹；description=消耗钢齿妖丹。灵枢 · 金 +12；effects=1. type=process_recipe；recipe_id=refine_steel_fang_core
+5. id=closed_door_breakthrough；name=闭关突破；description=消耗本次休息机会，检查根基并尝试突破筑基。；breakthrough_rule_id=qi_to_foundation；effects=",,title=避风石窟
+wandering_qi_shop,,shop,松烟缭绕旧木案，符箓、丹药与旧卷在灯下泛着微光。,"1. id=buy_water_talisman；name=购买水波符；description=获得水波符1张。；spirit_stone_cost=12；effects=1. type=add_item；item_id=water_talisman；quantity=1
+2. id=buy_recovery_talisman；name=购买回春符；description=获得回春符1张。；spirit_stone_cost=15；effects=1. type=add_item；item_id=recovery_talisman；quantity=1
+3. id=buy_vitality_pill；name=购买养元丹；description=获得养元丹1枚。；spirit_stone_cost=22；effects=1. type=add_item；item_id=vitality_pill；quantity=1
+4. id=buy_five_element_compass；name=购买五行罗盘；description=获得改变丹田保留规则的法宝。；spirit_stone_cost=45；effects=1. type=add_relic；relic_id=five_element_compass
+5. id=buy_golden_arc；name=购买流金剑弧残卷；description=尝试掌握金行群攻神通流金剑弧。；spirit_stone_cost=25；effects=1. type=learn_spell；spell_id=golden_arc
+6. id=forget_fireball；name=洗去火弹术；description=支付灵石，从本局构筑中遗忘火弹术。；spirit_stone_cost=8；effects=1. type=forget_spell；spell_id=fireball
+7. id=forget_body_protection；name=洗去岩甲术；description=支付灵石，从本局构筑中遗忘岩甲术。；spirit_stone_cost=8；effects=1. type=forget_spell；spell_id=body_protection
+8. id=forget_water_arrow；name=洗去水箭术；description=支付灵石，从本局构筑中遗忘水箭术。；spirit_stone_cost=8；effects=1. type=forget_spell；spell_id=water_arrow
+9. id=temper_fire_to_water；name=调和火水；description=将5点火灵气转化为水灵气。；spirit_stone_cost=10；effects=1. type=convert_core_qi；from_qi=火；to_qi=水；value=5
+10. id=temper_water_to_earth；name=调和水土；description=将5点水灵气转化为土灵气。；spirit_stone_cost=10；effects=1. type=convert_core_qi；from_qi=水；to_qi=土；value=5",,title=云游商棚
+placeholder_sealed_chest,,treasure,禁制已经松动，只能从匣中取走一件机缘。,"1. id=take_relic；name=取走镇脉石；description=获得法宝镇脉石。；effects=1. type=add_relic；relic_id=vein_stabilizing_stone
+2. id=take_spell；name=参悟五行护体诀；description=尝试掌握通用防御神通。；effects=1. type=learn_spell；spell_id=five_element_guard
+3. id=take_qi；name=吸收匣中灵气；description=灵枢 · 火 +12；effects=1. type=add_core_qi；qi=火；value=12",,title=封尘木匣
+breakthrough_qi_to_foundation,,breakthrough,静心内观，检视灵枢、功法与一路实战所得。,,,title=炼气突破检查；breakthrough_rule_id=qi_to_foundation

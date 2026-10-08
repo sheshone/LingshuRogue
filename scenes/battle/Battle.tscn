@@ -1,0 +1,493 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Script" path="res://scripts/managers/battle_manager.gd" id="1_battle"]
+[ext_resource type="Script" path="res://scripts/managers/qi_manager.gd" id="2_qi"]
+[ext_resource type="Script" path="res://scripts/managers/spell_manager.gd" id="3_spell"]
+[ext_resource type="Script" path="res://scripts/systems/combat_effect_executor.gd" id="4_effect"]
+[ext_resource type="Script" path="res://scripts/ui/battle_ui.gd" id="5_ui"]
+[ext_resource type="Script" path="res://scripts/managers/reward_manager.gd" id="6_reward"]
+[ext_resource type="Script" path="res://scripts/managers/cultivation_method_manager.gd" id="7_method"]
+[ext_resource type="Script" path="res://scripts/managers/relic_manager.gd" id="8_relic"]
+[ext_resource type="Theme" path="res://assets/ui/battle_theme.tres" id="9_theme"]
+[ext_resource type="Texture2D" path="res://assets/art/backgrounds/mountain_pass_battle-v1.png" id="10_bg"]
+[ext_resource type="Texture2D" path="res://assets/art/portraits/cultivator_atlas-v1.png" id="11_portraits"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/spiritual_sense-icon-clean-v1.png" id="12_sense"]
+
+[sub_resource type="AtlasTexture" id="PlayerPortrait"]
+atlas = ExtResource("11_portraits")
+region = Rect2(0, 0, 448, 448)
+
+[node name="Battle" type="Node"]
+script = ExtResource("1_battle")
+
+[node name="QiManager" type="Node" parent="."]
+script = ExtResource("2_qi")
+
+[node name="SpellManager" type="Node" parent="."]
+script = ExtResource("3_spell")
+
+[node name="CombatEffectExecutor" type="Node" parent="."]
+script = ExtResource("4_effect")
+
+[node name="RewardManager" type="Node" parent="."]
+script = ExtResource("6_reward")
+
+[node name="CultivationMethodManager" type="Node" parent="."]
+script = ExtResource("7_method")
+
+[node name="RelicManager" type="Node" parent="."]
+script = ExtResource("8_relic")
+
+[node name="BattleUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+clip_contents = true
+theme = ExtResource("9_theme")
+script = ExtResource("5_ui")
+
+[node name="InkBackground" type="ColorRect" parent="BattleUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.025, 0.035, 0.034, 1)
+
+[node name="PaperWash" type="ColorRect" parent="BattleUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = -8.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.18, 0.19, 0.17, 0.42)
+
+[node name="Landscape" type="TextureRect" parent="BattleUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+modulate = Color(0.58, 0.62, 0.58, 0.72)
+texture = ExtResource("10_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="InkMountainsFar" type="Polygon2D" parent="BattleUI"]
+visible = false
+polygon = PackedVector2Array(0, 390, 95, 300, 170, 358, 270, 250, 355, 338, 470, 275, 560, 354, 680, 238, 790, 342, 885, 280, 960, 345, 960, 540, 0, 540)
+color = Color(0.08, 0.12, 0.115, 0.42)
+
+[node name="InkMountainsNear" type="Polygon2D" parent="BattleUI"]
+visible = false
+polygon = PackedVector2Array(0, 445, 130, 355, 235, 430, 365, 330, 490, 438, 620, 350, 750, 432, 875, 360, 960, 420, 960, 540, 0, 540)
+color = Color(0.025, 0.05, 0.048, 0.62)
+
+[node name="ActionFlash" type="ColorRect" parent="BattleUI"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.85, 0.68, 0.32, 0)
+
+[node name="BattleContent" type="MarginContainer" parent="BattleUI"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 0.0
+offset_right = -18.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main" type="VBoxContainer" parent="BattleUI/BattleContent"]
+layout_mode = 2
+theme_override_constants/separation = 3
+clip_contents = true
+
+[node name="TopPanel" type="PanelContainer" parent="BattleUI/BattleContent/Main"]
+layout_mode = 2
+theme_type_variation = &"TopPanel"
+clip_contents = true
+
+[node name="Top" type="VBoxContainer" parent="BattleUI/BattleContent/Main/TopPanel"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="TitleLabel" type="Label" parent="BattleUI/BattleContent/Main/TopPanel/Top"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "新手试炼"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="InfoRow" type="HBoxContainer" parent="BattleUI/BattleContent/Main/TopPanel/Top"]
+layout_mode = 2
+
+[node name="PlayerPortrait" type="TextureRect" parent="BattleUI/BattleContent/Main/TopPanel/Top/InfoRow"]
+visible = false
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 2
+texture = SubResource("PlayerPortrait")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TurnLabel" type="Label" parent="BattleUI/BattleContent/Main/TopPanel/Top/InfoRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "战斗准备"
+autowrap_mode = 2
+
+[node name="SenseIcon" type="TextureRect" parent="BattleUI/BattleContent/Main/TopPanel/Top/InfoRow"]
+visible = false
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+tooltip_text = "神识：掌握神通所占用的心神容量"
+texture = ExtResource("12_sense")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 1
+
+[node name="PlayerLabel" type="Label" parent="BattleUI/BattleContent/Main/TopPanel/Top/InfoRow"]
+visible = false
+unique_name_in_owner = true
+custom_minimum_size = Vector2(58, 22)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "玩家"
+horizontal_alignment = 0
+vertical_alignment = 1
+autowrap_mode = 0
+clip_text = true
+
+[node name="Resources" type="HBoxContainer" parent="BattleUI/BattleContent/Main/TopPanel/Top"]
+layout_mode = 2
+theme_override_constants/separation = 16
+clip_contents = true
+
+[node name="QiLabel" type="RichTextLabel" parent="BattleUI/BattleContent/Main/TopPanel/Top/Resources"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "丹田"
+bbcode_enabled = true
+fit_content = false
+scroll_active = false
+autowrap_mode = 2
+clip_contents = true
+
+[node name="CoreQiLabel" type="RichTextLabel" parent="BattleUI/BattleContent/Main/TopPanel/Top/Resources"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "灵枢"
+bbcode_enabled = true
+fit_content = false
+scroll_active = false
+autowrap_mode = 2
+clip_contents = true
+
+[node name="ResourceRightSpacer" type="Control" parent="BattleUI/BattleContent/Main/TopPanel/Top/Resources"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StatusScroll" type="ScrollContainer" parent="BattleUI/BattleContent/Main/TopPanel/Top"]
+visible = false
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="PlayerStatusLabel" type="Label" parent="BattleUI/BattleContent/Main/TopPanel/Top/StatusScroll"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "状态：无"
+autowrap_mode = 2
+
+[node name="RelicContainer" type="HBoxContainer" parent="BattleUI/BattleContent/Main/TopPanel/Top"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="MiddlePanel" type="PanelContainer" parent="BattleUI/BattleContent/Main"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"ArenaPanel"
+
+[node name="Middle" type="VBoxContainer" parent="BattleUI/BattleContent/Main/MiddlePanel"]
+layout_mode = 2
+
+[node name="EnemyTitle" type="Label" parent="BattleUI/BattleContent/Main/MiddlePanel/Middle"]
+visible = false
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+text = "敌影"
+theme_override_colors/font_color = Color(0.86, 0.69, 0.39, 1)
+autowrap_mode = 2
+
+[node name="EnemyScroll" type="ScrollContainer" parent="BattleUI/BattleContent/Main/MiddlePanel/Middle"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_scroll_mode = 0
+
+[node name="EnemyContainer" type="VBoxContainer" parent="BattleUI/BattleContent/Main/MiddlePanel/Middle/EnemyScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Arena" type="Control" parent="BattleUI/BattleContent/Main/MiddlePanel/Middle"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_vertical = 3
+clip_contents = true
+
+[node name="PlayerVisualHost" type="Control" parent="BattleUI/BattleContent/Main/MiddlePanel/Middle/Arena"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 0.34
+anchor_bottom = 1.0
+offset_left = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnemyVisualHost" type="HBoxContainer" parent="BattleUI/BattleContent/Main/MiddlePanel/Middle/Arena"]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.46
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+theme_override_constants/separation = -18
+
+[node name="Lower" type="HBoxContainer" parent="BattleUI/BattleContent/Main"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_constants/separation = 4
+
+[node name="SpellPanel" type="PanelContainer" parent="BattleUI/BattleContent/Main/Lower"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"HandPanel"
+
+[node name="Spells" type="VBoxContainer" parent="BattleUI/BattleContent/Main/Lower/SpellPanel"]
+layout_mode = 2
+
+[node name="SpellTitle" type="RichTextLabel" parent="BattleUI/BattleContent/Main/Lower/SpellPanel/Spells"]
+unique_name_in_owner = true
+z_index = 50
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+text = "[center]神识[/center]"
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+theme_override_colors/font_color = Color(0.86, 0.69, 0.39, 1)
+autowrap_mode = 2
+
+[node name="SpellContainer" type="HFlowContainer" parent="BattleUI/BattleContent/Main/Lower/SpellPanel/Spells"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 190)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+alignment = 1
+last_wrap_alignment = 1
+theme_override_constants/h_separation = -8
+theme_override_constants/v_separation = 5
+
+[node name="ItemPanel" type="PanelContainer" parent="BattleUI/BattleContent/Main/Lower"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+
+[node name="Items" type="VBoxContainer" parent="BattleUI/BattleContent/Main/Lower/ItemPanel"]
+layout_mode = 2
+
+[node name="ItemTitle" type="Label" parent="BattleUI/BattleContent/Main/Lower/ItemPanel/Items"]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+text = "符囊"
+theme_override_colors/font_color = Color(0.86, 0.69, 0.39, 1)
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ItemScroll" type="ScrollContainer" parent="BattleUI/BattleContent/Main/Lower/ItemPanel/Items"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ItemContainer" type="VBoxContainer" parent="BattleUI/BattleContent/Main/Lower/ItemPanel/Items/ItemScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BottomPanel" type="PanelContainer" parent="BattleUI/BattleContent/Main"]
+layout_mode = 2
+theme_type_variation = &"ActionPanel"
+
+[node name="Bottom" type="HBoxContainer" parent="BattleUI/BattleContent/Main/BottomPanel"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="MessageLabel" type="Label" parent="BattleUI/BattleContent/Main/BottomPanel/Bottom"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 27)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "正在载入战斗……"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+max_lines_visible = 2
+
+[node name="Buttons" type="HBoxContainer" parent="BattleUI/BattleContent/Main/BottomPanel/Bottom"]
+layout_mode = 2
+alignment = 1
+
+[node name="EnemyActionButton" type="Button" parent="BattleUI/BattleContent/Main/BottomPanel/Bottom/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(190, 40)
+layout_mode = 2
+text = "结束行动"
+
+[node name="ContinueButton" type="Button" parent="BattleUI/BattleContent/Main/BottomPanel/Bottom/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(190, 40)
+layout_mode = 2
+text = "进入下一战"
+
+[node name="RewardScreen" type="Control" parent="BattleUI"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="BattleUI/RewardScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.025, 0.035, 0.034, 1)
+
+[node name="Margin" type="MarginContainer" parent="BattleUI/RewardScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = 34.0
+offset_right = -42.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RewardPanel" type="VBoxContainer" parent="BattleUI/RewardScreen/Margin"]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="Heading" type="Label" parent="BattleUI/RewardScreen/Margin/RewardPanel"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "战斗结算"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="RewardTitle" type="Label" parent="BattleUI/RewardScreen/Margin/RewardPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "选择战斗奖励"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="RewardHelpLabel" type="Label" parent="BattleUI/RewardScreen/Margin/RewardPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.72, 0.56, 1)
+text = "奖励会影响本局后续修行。"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="RewardScroll" type="ScrollContainer" parent="BattleUI/RewardScreen/Margin/RewardPanel"]
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_vertical = 0
+horizontal_scroll_mode = 0
+
+[node name="RewardCenter" type="CenterContainer" parent="BattleUI/RewardScreen/Margin/RewardPanel/RewardScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RewardContainer" type="GridContainer" parent="BattleUI/RewardScreen/Margin/RewardPanel/RewardScroll/RewardCenter"]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 1
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+
+[node name="RewardSkipButton" type="Button" parent="BattleUI/RewardScreen"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -88.0
+offset_right = -42.0
+offset_bottom = -42.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "跳过"
